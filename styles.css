@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css?family=Abel:400|PT+Sans:400,700,700i,400i');
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background: #ECD7CD!important;
+   
+}
+
+*{
+	 font-family: 'Abel', sans-serif;
+}
+
+/*
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Abel', sans-serif;
+	background: #fcf2dc!important;
+}
+
+
+
+body{
+ 	margin: 0px;
+ 	
+ }
+ */
+a{
+		text-decoration: none;
+
+}
+
+
+.header { 
+	display: block;
+  	width: 100%;
+  	background-color: #ECD7CD;
+  	height: 8%;
+  	margin-bottom: -5px;
+}
+
+
+.header h1{
+  	display: flex;
+    height: 8%;
+	float: left;
+ 	margin-left: 10%;
+ 	background-color: #ECD7CD;
+
+ }
+
+/*
+  color: black;	
+  display: inline-flex;
+  text-decoration: none;
+  padding-left: 15%;
+  padding-top: 3%;
+  */
+
+
+
+/*
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 55px;
+    display: none;
+    width: 26px;
+    float: left;
+}
+*/
+
+
+
+.topnav {
+  overflow: hidden;
+  	background-color: #ECD7CD;
+  	left: 0;
+  	right: 0;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 2px solid #EAEAEB;
+  background-color: #ECD7CD;
+
+}
+
+.topnav a:hover{
+	color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* Add an active class to highlight the current page */
+/*
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+*/
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/*
+* Add a dark background on topnav links and the dropdown button on hover 
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}*/
+
+
+.main{
+	width: 80vw;
+	margin: 0 auto;
+	padding: 30px 20px;
+/*	min-height: calc(100vh - 500px - 5px); */
+	background-color: white!important;
+	margin-top: 3%;
+	margin-bottom: 2%;
+}	
+
+.article{
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	background: #fcf2dc!important;
+   
+}
+
+.article last-child{
+	margin-bottom: 0;
+}
+
+.article p{
+	margin-top: 16px;
+	line-height: 24px;
+} 
+
+.main article h3{
+	margin: 10px 0 25px 0;
+}
+
+.footer{
+	text-align: center;
+	background-color: #ECD7CD!important;
+	height:50px;
+	margin-top:-100px;
+	padding: 10px;
+	position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    clear:both;
+ }
+
+
+
+.footer a{
+    position: relative;
+    display: inline-block!important;
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.3s;
+    transform: translate(0,0px);
+    text-decoration: none;
+
+
+}
+
+.footer p{
+     display: inline-block!important;
+     font-size: 20px;
+ }
+
+
+
+.footer a i{
+	color: #000000;
+    font-size: 35px;
+    line-height: 10px 10px;
+    transition: .3s;
+    list-style: none;
+    margin: 0 5px;
+}
+
+.footer a i .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+
+}
+
+.footer .fa-twitter:hover {
+	 color: #1DA1F2;
+}
+
+.footer .fa-github:hover {
+    color: gray;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+	.topnav a{
+	display: none;s
+    }
+
+    .topnav a.icon {
+        float: center;
+        display: block;
+     }
+
+
+/*
+  .topnav a, .dropdown .dropbtn {
+    width: 100%;
+    float: center;
+    display: block;
+
+  }
+  */
+  
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+ 
+  }
+  .topnav.responsive a {
+  	width: 100%;
+    float: center;
+    display: block;
+    text-align: center!important;
+  }
+  
+}
+
+
+/*
+@media only screen and (max-width: 600px) {
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+      }
+
+    .menu {
+    	height: auto;
+    	top:350px;
+        text-align: center;
+        width: 50%;
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 2px solid #EAEAEB;
+        margin: 0;
+     
+    }
+    #toggle:checked + .menu {
+        display: block;
+        height: auto;
+    }
+
+    .footer{
+	 	width: 100%;
+		bottom: 5%;
+
+	}
+	.footer .fa-twitter:hover {
+	    color: #1DA1F2;
+	}
+
+	.footer .fa-github:hover {
+    	color: gray;
+	}
+    
+    
+}
+
+
+
+
+
+/*
+#sidebar{
+	position: fixed;
+	width: 200px;
+	height: 100%;
+	background: #151719;
+	left: -200px;
+	transition: all 500ms linear;
+}
+
+#sidebar.active{
+	left: 0px;
+}
+
+#sidebar ul li{
+    color: rgba(230,230,230,0.9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+
+#sidebar .toggle-btn{
+	position: absolute;
+	left: 230px;
+	top: 20px;
+}
+
+#sidebar .toggle-btn span{
+	display: block;
+	width: 30px;
+	height: 5px;
+	background: #151719;
+	margin: 5px 0px;
+}
+
+*/
+
