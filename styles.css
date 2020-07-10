@@ -12,21 +12,7 @@ html, body {
 	 font-family: 'Abel', sans-serif;
 }
 
-/*
-*{
-	margin: 0px;
-	padding: 0px;
-	font-family: 'Abel', sans-serif;
-	background: #fcf2dc!important;
-}
 
-
-
-body{
- 	margin: 0px;
- 	
- }
- */
 a{
 		text-decoration: none;
 
@@ -52,28 +38,6 @@ a{
     text-decoration: none;
 
  }
-
-/*
-  color: black;	
-  display: inline-flex;
-  text-decoration: none;
-  padding-left: 15%;
-  padding-top: 3%;
-  */
-
-
-
-/*
-label {
-    margin: 0 40px 0 0;
-    font-size: 26px;
-    line-height: 55px;
-    display: none;
-    width: 26px;
-    float: left;
-}
-*/
-
 
 
 .topnav {
@@ -122,13 +86,6 @@ label {
 .topnav .icon {
   display: none;
 }
-
-/*
-* Add a dark background on topnav links and the dropdown button on hover 
-.topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
-}*/
 
 
 .main{
@@ -240,7 +197,6 @@ label {
         color: #fcf2dc;
      }
 
-
 /*
   .topnav a, .dropdown .dropbtn {
     width: 100%;
@@ -269,88 +225,4 @@ label {
   }
   
 }
-
-
-/*
-@media only screen and (max-width: 600px) {
-    .menu-icon{
-        display: block;
-        cursor: pointer;
-      }
-
-    .menu {
-    	height: auto;
-    	top:350px;
-        text-align: center;
-        width: 50%;
-        display: none;
-    }
-    .menu a {
-        display: block;
-        border-bottom: 2px solid #EAEAEB;
-        margin: 0;
-     
-    }
-    #toggle:checked + .menu {
-        display: block;
-        height: auto;
-    }
-
-    .footer{
-	 	width: 100%;
-		bottom: 5%;
-
-	}
-	.footer .fa-twitter:hover {
-	    color: #1DA1F2;
-	}
-
-	.footer .fa-github:hover {
-    	color: gray;
-	}
-    
-    
-}
-
-
-
-
-
-/*
-#sidebar{
-	position: fixed;
-	width: 200px;
-	height: 100%;
-	background: #151719;
-	left: -200px;
-	transition: all 500ms linear;
-}
-
-#sidebar.active{
-	left: 0px;
-}
-
-#sidebar ul li{
-    color: rgba(230,230,230,0.9);
-    list-style: none;
-    padding: 15px 10px;
-    border-bottom: 1px solid gray;
-    text-align: center;
-}
-
-#sidebar .toggle-btn{
-	position: absolute;
-	left: 230px;
-	top: 20px;
-}
-
-#sidebar .toggle-btn span{
-	display: block;
-	width: 30px;
-	height: 5px;
-	background: #151719;
-	margin: 5px 0px;
-}
-
-*/
 
