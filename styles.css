@@ -21,9 +21,9 @@ a{
 
 .header {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start; /* Change to flex-start */
+    flex-direction: row; /* Change flex direction to row */
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Distribute items horizontally with space between them */
     width: 100%;
     background-color: white;
     height: 14%;
@@ -42,43 +42,43 @@ a{
     color: #808080;
     margin: 0; /* Remove top margin */
 }
+
 .topnav {
-  overflow: hidden;
-  	background-color: white;
-	height: 14%;
-  	left: 0;
-  	right: 0;
-
+    overflow: hidden;
+    background-color: white;
+    height: 14%;
+    left: 0;
+    right: 0;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a{
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  border-bottom: 2px solid #808080;
-  background-color: white;
-
+.topnav a {
+    float: right; /* Align navigation links to the right */
+    display: inline-block; /* Display links in a row */
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    /* border-bottom: 2px solid #808080; Remove the border line */
+    background-color: white;
 }
 
-.topnav a:hover{
-	color: #808080;
+.topnav a:hover {
+    color: #808080;
 }
 
-.topnav a:first-child{
-  display: none;
+.topnav a:first-child {
+    display: none;
 }
 
 .topnav-right {
-  float: right;
-	display: flex;
-    align-items: center; /* Vertically center items */
-    height: 100%; /* Take up full height of .topnav */
+    /* float: right; Remove this line */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    height: 100%;
 }
+
 
 /* Add an active class to highlight the current page */
 /*
