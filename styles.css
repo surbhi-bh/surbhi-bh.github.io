@@ -92,6 +92,10 @@ a{
   display: none;
 }
 
+.subheader {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #808080; /* Adjust the color if desired */
+}
 
 .main{
 	width: 80vw;
