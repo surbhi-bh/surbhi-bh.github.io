@@ -5,25 +5,16 @@ html, body {
     height: 100%;
     margin: 0px;
     background: white!important;
-   
 }
 
-*{
-	 font-family: 'Abel', sans-serif;
+* {
+    font-family: 'Abel', sans-serif;
 }
-
-
-a{
-		text-decoration: none;
-
-}
-
 
 .header {
-   display: flex;
-    flex-direction: row; /* Change to row for side-by-side layout */
-    justify-content: space-between; /* Align items to both sides */
-    align-items: center; /* Vertically center items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     background-color: white;
     height: 14%;
@@ -31,65 +22,51 @@ a{
     padding: 0 10%;
 }
 
-.header h1 {
-    color: black;
-    text-decoration: none;
-    margin: 0;
-}
-
 .subheader {
     font-size: 18px;
     color: #808080;
-    margin: 0; /* Remove top margin */
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
+
+.subheader a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+}
+
 .topnav {
-  overflow: hidden;
-  	background-color: white;
-	height: 14%;
-/*   	left: 0;
-  	right: 0; */
-
-}
-
-/* Style the links inside the navigation bar */
-.topnav a{
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  background-color: white;
-
-}
-
-.topnav a:hover{
-	color: #808080;
-}
-
-.topnav a:first-child{
-  display: none;
+    overflow: hidden;
+    background-color: white;
+    height: 14%;
 }
 
 .topnav-right {
-  float: right;
-	display: flex;
-    align-items: center; /* Vertically center items */
-    height: 100%; /* Take up full height of .topnav */
+    float: right;
 }
 
-/* Add an active class to highlight the current page */
-/*
-.active {
-  background-color: #4CAF50;
-  color: grey;
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: white;
 }
-*/
 
-/* Hide the link that should open and close the topnav on small screens */
+.topnav a:hover {
+    color: #808080;
+}
+
+.topnav a:first-child {
+    display: none;
+}
+
 .topnav .icon {
-  display: none;
+    display: none;
 }
 
 
