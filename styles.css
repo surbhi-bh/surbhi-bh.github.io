@@ -19,27 +19,29 @@ a{
 }
 
 
-.header { 
-	display: block;
-  	width: 100%;
-  	background-color: white;
-  	height: 14%;
-  	margin-bottom: -5px;
-
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    height: 14%;
+    margin-bottom: -5px;
+    padding: 0 10%;
 }
 
-
-.header h1{
-  	display: flex;
-    height: 100%;
-	align-item: center;
-  	float: left;
- 	  margin-left: 10%;
+.header h1 {
     color: black;
     text-decoration: none;
+    margin: 0;
+}
 
- }
-
+.subheader {
+    font-size: 18px;
+    color: #808080;
+    margin: 5px 0 0 0;
+}
 
 .topnav {
   overflow: hidden;
@@ -92,10 +94,6 @@ a{
   display: none;
 }
 
-.subheader {
-    font-size: 16px; /* Adjust the font size as needed */
-    color: #808080; /* Adjust the color if desired */
-}
 
 .main{
 	width: 80vw;
