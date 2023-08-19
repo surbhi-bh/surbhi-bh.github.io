@@ -14,7 +14,7 @@ html, body {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Updated alignment */
+    align-items: flex-start;
     width: 100%;
     background-color: white;
     height: 14%;
@@ -22,17 +22,19 @@ html, body {
     padding: 0 10%;
 }
 
-.header-text {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Start from the left */
+.subheader {
+    font-size: 18px;
+    color: #808080;
+    margin: 0;
+    display: block; /* Set display to block */
 }
 
 .header-links {
     display: flex;
     flex-direction: column; /* Stack links vertically */
     align-items: flex-start; /* Start from the left */
-    margin-top: 10px; /* Add some space between subheader and links */
+    margin-left: 20px; /* Add margin to the left of links */
+    margin-top: 5px; /* Add some space between subheader and links */
 }
 
 .subheader {
