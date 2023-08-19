@@ -44,6 +44,7 @@ a{
 .topnav {
   overflow: hidden;
   	background-color: white;
+	height: 14%;
   	left: 0;
   	right: 0;
 
@@ -73,6 +74,9 @@ a{
 
 .topnav-right {
   float: right;
+	display: flex;
+    align-items: center; /* Vertically center items */
+    height: 100%; /* Take up full height of .topnav */
 }
 
 /* Add an active class to highlight the current page */
