@@ -23,7 +23,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start; /* Change to flex-start */
     width: 100%;
     background-color: white;
     height: 14%;
@@ -40,9 +40,8 @@ a{
 .subheader {
     font-size: 18px;
     color: #808080;
-    margin: 5px 0 0 0;
+    margin: 0; /* Remove top margin */
 }
-
 .topnav {
   overflow: hidden;
   	background-color: white;
