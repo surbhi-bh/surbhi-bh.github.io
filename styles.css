@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Abel:400|PT+Sans:400,700,700i,400i');
 
-html, body {
+html{
     width: 100%;
     height: 100%;
     margin: 0px;
     background: white!important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: none;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Make sure content is at least full viewport height */
+    position: relative; /* Relative positioning to align image */
 }
 
 * {
@@ -14,20 +25,16 @@ html, body {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Align items to the top */
+    align-items: flex-start;
     width: 100%;
-    background-color: white;
-    height: 14%;
-    margin-bottom: -5px;
+    background-color: transparent; /* Remove background color */
+    height: auto; /* Allow height to adjust to content */
     padding: 0 10%;
+    position: absolute; /* Position header absolutely */
+    top: 0;
+    left: 0;
 }
 
-
-.subheader {
-    font-size: 18px;
-    color: #808080;
-    margin: 0;
-}
 
 .header-links {
     display: flex;
@@ -40,8 +47,6 @@ html, body {
     font-size: 18px;
     color: #808080;
     margin: 0;
-    display: flex;
-    align-items: center;
 }
 
 .subheader a {
@@ -85,9 +90,20 @@ html, body {
 
 .topnav-links {
     display: flex;
-    align-items: flex-end; /* Align items to the bottom */
-    margin-right: 20px; /* Add margin to the right of links */
-    margin-top: 0; /* Remove space between subheader and links */
+    align-items: flex-end;
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+.circular-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url('path_to_your_image.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 .main{
