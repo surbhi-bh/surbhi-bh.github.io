@@ -14,13 +14,14 @@ html, body {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Updated alignment */
+    align-items: flex-start; /* Align items to the top */
     width: 100%;
     background-color: white;
     height: 14%;
     margin-bottom: -5px;
     padding: 0 10%;
 }
+
 
 .subheader {
     font-size: 18px;
@@ -82,6 +83,12 @@ html, body {
     display: none;
 }
 
+.topnav-links {
+    display: flex;
+    align-items: flex-end; /* Align items to the bottom */
+    margin-right: 20px; /* Add margin to the right of links */
+    margin-top: 0; /* Remove space between subheader and links */
+}
 
 .main{
 	width: 80vw;
