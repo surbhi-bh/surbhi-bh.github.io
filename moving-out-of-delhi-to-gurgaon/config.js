@@ -10,7 +10,7 @@ var config = {
     title: 'Making of an edge city',
     subtitle: 'Residents of <span class="highlight">Delhi</span> are moving out to <span class="highlight-red">Gurgaon</span>',
     byline: 'By Surbhi Bhatia',
-    image: "/Users/surbhibhatia/Desktop/LEDE-PROJECT/projectTwo_Delhi/india_map_inset_expand.png", // Replace with the actual path to your image
+    image: "/Users/surbhibhatia/Desktop/surbhi-bh.github.io/moving-out-of-delhi-to-gurgaon/india_map_inset_expand.png", // Replace with the actual path to your image
     footer: `
     <div>
      </p>
