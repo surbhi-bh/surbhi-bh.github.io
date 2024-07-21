@@ -10,7 +10,21 @@ var config = {
     title: 'Making of an edge city',
     subtitle: 'Residents of <span class="highlight">Delhi</span> are moving out to <span class="highlight-red">Gurgaon</span>',
     byline: 'By Surbhi Bhatia',
-    footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    image: "/Users/surbhibhatia/Desktop/LEDE-PROJECT/projectTwo_Delhi/india_map_inset_expand.png", // Replace with the actual path to your image
+    footer: `
+    <div>
+     </p>
+        <p>Source: source citations, etc. Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.</p>
+        <p>surbhibhatia1906[at]gmail[com]</a></p>
+        <p>
+            <a href="https://x.com/surbhaai" target="_blank" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/surbhi-bh" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a> 
+    </div>
+`,
     chapters: [
         {
             id: 'slug-style-id',
@@ -36,7 +50,7 @@ var config = {
                 },
                 {
                     layer: 'delhi-ncr',
-                    opacity: 0.2,
+                    opacity: 0,
                     duration: 500
                 },
                 {
@@ -53,7 +67,56 @@ var config = {
                 {
                     layer: 'delhi_L1',
                     opacity: 1
-                }
+                },
+                 {
+                    layer: 'delhi-ncr',
+                    opacity: 0,
+                    duration: 500
+                },
+                {
+                    layer: 'yellowline-allstations-correct',
+                    opacity: 0,
+                    duration: 500
+                },
+                {
+                    layer: 'yellowline-line',
+                    opacity: 0
+                },
+                {
+                    layer: 'rapid-line',
+                    opacity: 0
+                },
+                {
+                    layer: 'rapid-icon',
+                    opacity: 0
+                },
+                {
+                    layer: 'lulc2000',
+                    opacity: 0
+                },
+                {
+                    layer: 'lulc2020',
+                    opacity: 0
+                },
+                {
+                    layer: 'proposed-line',
+                    opacity: 0
+                },
+                {
+                    layer: 'delhi-ncr-gurgaon-highlight',
+                    opacity: 0,
+                    duration: 500
+                },
+                // {
+                //     layer: 'delhi-ncr',
+                //     opacity: 0,
+                //     duration: 500
+                // },
+                // {
+                //     layer: 'delhi-ncr-gurgaon-highlight',
+                //     opacity: 0,
+                //     duration: 500
+                // }
             ]
         },
         // {
@@ -86,36 +149,36 @@ var config = {
         //         },
         //     ]
         // },
-        {
-            id: 'third-identifier',
-            alignment: 'left',
-            hidden: false,
-            //title: '',
-            //image: './path/to/image/source.png',
-            description: 'This is some text. This is some text. This is some text. This is some text. This is some text.',
-            location: {
-                center: [77.1484, 28.5293],
-                zoom: 7.5,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'jumpTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {
-                    layer: 'yellowline-first',
-                    opacity: 1,
-                    duration: 500
-                },
-                {
-                    layer: 'yellowline-allstations',
-                    opacity: 0,
-                    duration: 500
-                }
-            ],
-            onChapterExit: []
-        },
+        // {
+        //     id: 'third-identifier',
+        //     alignment: 'left',
+        //     hidden: false,
+        //     //title: '',
+        //     //image: './path/to/image/source.png',
+        //     description: 'This is some text. This is some text. This is some text. This is some text. This is some text.',
+        //     location: {
+        //         center: [77.1484, 28.5293],
+        //         zoom: 7.5,
+        //         pitch: 0,
+        //         bearing: 0
+        //     },
+        //     mapAnimation: 'jumpTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {
+        //             layer: 'yellowline-first',
+        //             opacity: 1,
+        //             duration: 500
+        //         },
+        //         {
+        //             layer: 'yellowline-allstations',
+        //             opacity: 0,
+        //             duration: 500
+        //         }
+        //     ],
+        //     onChapterExit: []
+        // },
         {
             id: 'fourth-identifier',
             alignment: 'left',

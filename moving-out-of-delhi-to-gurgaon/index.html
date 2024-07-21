@@ -6,6 +6,7 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mapbox/assembly/publisher-staging/src/svgs/mapbox.svg">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://unpkg.com/intersection-observer@0.12.0/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
@@ -75,7 +76,7 @@
 }
 .highlight-red {
         color: white;
-        background-color: red;
+        background-color: #e7b461;
         padding: 2px 5px; /* Adjust padding for better spacing */
         border-radius: 3px; /* Optional: for rounded corners */
     }
@@ -87,18 +88,47 @@
             padding: 0 5px;
             border-radius: 3px;
 }
+#header img {
+            max-width: 350px;
+            height: auto;
+            margin-top: 50px; /* Adjust the space between the image and title */
+            margin-bottom: 0px;
+            
+        }
+        .social-icon {
+    text-decoration: none;
+    color: #000;
+    margin: 0 5px;
+    font-size: 1.2em; /* Adjust size as needed */
+}
+
+.social-icon:hover {
+    color: #0071bc; /* Change color on hover if desired */
+}
+
 
         #footer {
             width: 100%;
-            min-height: 5vh;
-            padding-top: 2vh;
-            padding-bottom: 2vh;
-            text-align: center;
-            line-height: 25px;
-            font-size: 13px;
-            position: relative;
-            z-index: 5;
+    min-height: 5vh;
+    padding: 2vh 0;
+    text-align: center;
+    line-height: 1; /* Adjust line-height for better spacing between lines */
+    font-size: 16px; /* Increase font size */
+    position: relative;
+    z-index: 5;
+    background: transparent; /* Ensure background is transparent */
         }
+
+        #footer a {
+    color: #e3735f; /* Set color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+#footer a:hover {
+    color: black;
+    text-shadow: 0 0 5px dimgrey;
+}
+
         #features {
             padding-top: 10vh;
             padding-bottom: 10vh;
@@ -234,6 +264,13 @@ if (config.byline) {
     header.appendChild(bylineText);
 }
 
+
+if (config.image) {
+                var img = document.createElement('img');
+                img.src = config.image;
+                header.appendChild(img);
+            }
+            
 if (header.innerText.length > 0) {
     header.classList.add(config.theme);
     header.setAttribute('id', 'header');
