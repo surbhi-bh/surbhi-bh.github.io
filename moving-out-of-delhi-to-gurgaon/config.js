@@ -7,9 +7,9 @@ var config = {
     theme: 'light',
     use3dTerrain: false,
     auto: false,
-    title: 'Making of an edge city -- Delhi moves out to Gurgaon',
-    subtitle: 'subhead subhead subhead subhead subhead subhead',
-    byline: 'By xxxx',
+    title: 'Making of an edge city',
+    subtitle: 'Residents of <span class="highlight">Delhi</span> are moving out to <span class="highlight-red">Gurgaon</span>',
+    byline: 'By Surbhi Bhatia',
     footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
@@ -36,12 +36,17 @@ var config = {
                 },
                 {
                     layer: 'delhi-ncr',
-                    opacity: 0.8,
+                    opacity: 0.2,
                     duration: 500
                 },
                 {
                     layer: 'proposed-line',
                     opacity: 0
+                },
+                {
+                    layer: 'delhi-ncr-gurgaon-highlight',
+                    opacity: 1,
+                    duration: 500
                 },
             ],
             onChapterExit: [
@@ -51,36 +56,36 @@ var config = {
                 }
             ]
         },
-        {
-            id: 'second-identifier',
-            alignment: 'left',
-            hidden: false,
-            //title: 'Chapter 2',
-            //image: './path/to/image/source.png',
-            description: 'This is some text. This is some text. This is some text. This is some text. This is some text.',
-            location: {
-                center: [77.1484, 28.5293],
-                zoom: 7.5,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'jumpTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {
-                    layer: 'delhi-ncr-gurgaon-highlight',
-                    opacity: 1,
-                    duration: 500
-                }
-            ],
-            onChapterExit: [
-                {
-                    layer: 'delhi-ncr',
-                    opacity: 0
-                }
-            ]
-        },
+        // {
+        //     id: 'second-identifier',
+        //     alignment: 'left',
+        //     hidden: false,
+        //     //title: 'Chapter 2',
+        //     //image: './path/to/image/source.png',
+        //     description: 'This is some text. This is some text. This is some text. This is some text. This is some text.',
+        //     location: {
+        //         center: [77.1484, 28.5293],
+        //         zoom: 7.5,
+        //         pitch: 0,
+        //         bearing: 0
+        //     },
+        //     mapAnimation: 'jumpTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {
+        //             layer: 'delhi-ncr-gurgaon-highlight',
+        //             opacity: 1,
+        //             duration: 500
+        //         }
+        //     ],
+        //     onChapterExit: [
+        //         {
+        //             layer: 'delhi-ncr',
+        //             opacity: 0
+        //         },
+        //     ]
+        // },
         {
             id: 'third-identifier',
             alignment: 'left',
@@ -129,12 +134,12 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'delhi-ncr-gurgaon-highlight',
-                    opacity: 0.3,
+                    opacity: 0.1,
                     duration: 500
                 },
                 {
                     layer: 'delhi_L1',
-                    opacity: 0.3,
+                    opacity: 0.1,
                     duration: 500
                 },
                 {
