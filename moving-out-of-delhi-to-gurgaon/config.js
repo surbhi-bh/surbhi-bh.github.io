@@ -146,7 +146,7 @@ var config = {
                     layer: 'delhi-ncr-gurgaon-highlight',
                     opacity: 0,
                     duration: 500
-                },
+                }
                 // {
                 //     layer: 'delhi-ncr',
                 //     opacity: 0,
@@ -286,11 +286,31 @@ var config = {
                     duration: 500
                 },
                 {
+                    layer: 'rapid-line',
+                    opacity: 0,
+                    duration: 500
+                },
+                {
+                    layer: 'rapid-icon',
+                    opacity: 0,
+                    duration: 500
+                },
+                {
                     layer: 'yellowline-line',
                     opacity: 1
                 }
             ],
-            onChapterExit: []
+            onChapterExit: [   
+                {
+                layer: 'proposed-line',
+                opacity: 0,
+                duration: 500
+            },
+            {
+                layer: 'prop-points-csv',
+                opacity: 0
+            }
+        ]
         },
         {
             id: 'sixth-identifier',
@@ -328,6 +348,15 @@ var config = {
                     layer: 'rapid-icon',
                     opacity: 1,
                     duration: 500
+                },
+                {
+                    layer: 'proposed-line',
+                    opacity: 0,
+                    duration: 500
+                },
+                {
+                    layer: 'prop-points-csv',
+                    opacity: 0
                 }
             ],
             onChapterExit: []
@@ -473,7 +502,8 @@ var config = {
                 },
                 {
                     layer: 'lulc2020',
-                    opacity: 0.4
+                    opacity: 0.4, // Adjust opacity as needed to ensure visibility of both layers
+                    duration: 500
                 },
                 {
                     layer: 'delhi_L1',
