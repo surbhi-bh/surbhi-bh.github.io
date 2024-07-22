@@ -108,11 +108,11 @@ var config = {
                     layer: 'delhi_L1',
                     opacity: 0
                 },
-                 {
-                    layer: 'delhi-ncr',
-                    opacity: 0,
-                    duration: 0
-                },
+                //  {
+                //     layer: 'delhi-ncr',
+                //     opacity: 0,
+                //     duration: 0
+                // },
                 {
                     layer: 'yellowline-allstations-correct',
                     opacity: 0,
@@ -236,12 +236,12 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'delhi-ncr-gurgaon-highlight',
+                    layer: 'delhi_L1',
                     opacity: 0.1,
                     duration: 500
                 },
                 {
-                    layer: 'delhi_L1',
+                    layer: 'delhi-ncr-gurgaon-highlight',
                     opacity: 0.1,
                     duration: 500
                 },
@@ -251,7 +251,17 @@ var config = {
                     duration: 500
                 }
             ],
-            onChapterExit: []
+            onChapterExit: [    {
+                layer: 'delhi_L1',
+                opacity: 0.1,
+                duration: 500
+            },
+            {
+                layer: 'delhi-ncr-gurgaon-highlight',
+                opacity: 0.1,
+                duration: 500
+            }
+        ]
         },
         {
             id: 'fifth-identifier',
@@ -464,6 +474,11 @@ var config = {
             {
                 layer: 'lulc2020',
                 opacity: 0
+            },
+            {
+                layer: 'lulc2020',
+                opacity: 0.4, // Adjust opacity as needed to ensure visibility of both layers
+                duration: 500
             }
         ]
         },
