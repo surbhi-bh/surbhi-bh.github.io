@@ -12,20 +12,20 @@ var config = {
     byline: 'By Surbhi Bhatia',
     date: 'July 21, 2024',
     image: "./india_map_inset_expand.png", 
-    footer: `
-    <div>
-     </p>
-        <p>Source: source citations, etc. Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.</p>
-        <p>surbhibhatia1906[at]gmail[com]</a></p>
-        <p>
-            <a href="https://x.com/surbhaai" target="_blank" class="social-icon">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://github.com/surbhi-bh" target="_blank" class="social-icon">
-                <i class="fab fa-github"></i>
-            </a> 
-    </div>
-`,
+//     footer: `
+//     <div>
+//      </p>
+//         <p>Source: source citations, etc. Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.</p>
+//         <p>surbhibhatia1906[at]gmail[com]</a></p>
+//         <p>
+//             <a href="https://x.com/surbhaai" target="_blank" class="social-icon">
+//                 <i class="fab fa-twitter"></i>
+//             </a>
+//             <a href="https://github.com/surbhi-bh" target="_blank" class="social-icon">
+//                 <i class="fab fa-github"></i>
+//             </a> 
+//     </div>
+// `,
     chapters: [
         {
             id: 'starter',
@@ -33,7 +33,7 @@ var config = {
             hidden: false,
             //title: 'Display Title',
             //image: '/Users/surbhibhatia/Desktop/LEDE-PROJECT/projectTwo_Delhi/delhi_layer1.png',
-            description: 'Known as <span class="highlight">Delhi&apos;s</span> satellite city, <span class="highlight-red">Gurgaon</span> is situated 30 km southwest of the national capital at the Haryana border. In the last decade, its population has almost doubled from 876,000 to 1.25 million people. <br><br> Once just barren land, <span class="highlight-red">Gurgaon</span> is now a bustling <a href="https://en.wikipedia.org/wiki/Edge_city">edge city</a> with skyscrapers, corporate offices, IT parks, and shopping malls.',
+            description: 'In <span class="highlight">Delhi</span>, India&apos;s capital city and the political heart of the nation, government offices and housing hold prime real estate.',
             location: {
                 center: [77.1484, 28.5293],
                 zoom: 7.5,
@@ -52,17 +52,16 @@ var config = {
                 layer: 'delhi_L1',
                 opacity: 0,
                 duration: 500
-            }],
+            },
+        ],
             onChapterExit: [
             {
                 layer: 'starter',
                 opacity: 0,
-                duration: 500,
             },
             {
                 layer: 'yellowline-first',
                 opacity: 0,
-                duration: 500
             }
         ]
         },
@@ -72,7 +71,8 @@ var config = {
             hidden: false,
             //title: 'Display Title',
             //image: '/Users/surbhibhatia/Desktop/LEDE-PROJECT/projectTwo_Delhi/delhi_layer1.png',
-            description: 'Known as <span class="highlight">Delhi&apos;s</span> satellite city, <span class="highlight-red">Gurgaon</span> is situated 30 km southwest of the national capital at the Haryana border. In the last decade, its population has almost doubled from 876,000 to 1.25 million people. <br><br> Once just barren land, <span class="highlight-red">Gurgaon</span> is now a bustling <a href="https://en.wikipedia.org/wiki/Edge_city">edge city</a> with skyscrapers, corporate offices, IT parks, and shopping malls.',
+            description: 'Thirty kilometers southwest of <span class="highlight">Delhi</span> on the Haryana border,<span class="highlight-red">Gurgaon</span> has fast emerged as a bustling <a href="https://en.wikipedia.org/wiki/Edge_city">edge city</a> with skyscrapers, corporate offices, IT parks, and shopping malls. <br><br> Once just barren agricultural land,<span class="highlight-red">Gurgaon</span> is now a city developed entirely by private companies to cater to the country&apos;s growing professional class.',
+
             location: {
                 center: [77.1484, 28.5293],
                 zoom: 7.5,
@@ -111,12 +111,12 @@ var config = {
                  {
                     layer: 'delhi-ncr',
                     opacity: 0,
-                    duration: 500
+                    duration: 0
                 },
                 {
                     layer: 'yellowline-allstations-correct',
                     opacity: 0,
-                    duration: 500
+                    duration: 0
                 },
                 {
                     layer: 'yellowline-line',
@@ -297,7 +297,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             //title: 'Chapter 6',
-            description: 'A tiny <span class="highlight-blue">rapid metro</span>, connecting commerical areas within Gurgaon, appeared soon after. <br> <br> With trains, came the builders. Stations on this line got named after DLF, Vodafone, Raheja, Tata, Micromax and Reliance, who were all building townships to urbanise Gurgaon.',
+            description: 'A tiny <span class="highlight-blue">rapid metro</span>, connecting commerical areas within Gurgaon, appeared soon after. <br> <br> With trains, came the builders. Stations on this line were named after DLF, Vodafone, Raheja, Tata, Micromax and Reliance, who were all building townships to urbanise Gurgaon.',
             image: 'metronames.png',
             location: {
                 center: [77.0266, 28.4595],
@@ -338,7 +338,7 @@ var config = {
             hidden: false,
             //title: 'Chapter 7',
             //image: './path/to/image/source.png',
-            description: 'The city is now getting its own metro. In June 2023, a <span class="highlight-purple">28.5 km corridor</span> starting from Millennium City Centre Gurgaon was approved to improve connectivity within the city.',
+            description: 'The city is now getting its own metro. In June 2023, a plan for building a <span class="highlight-purple">28.5 km metro corridor</span> starting from Millennium City Centre Gurgaon was approved for better connectivity within the city.',
             location: {
                 center: [77.0266, 28.4595],
                 zoom: 9,
@@ -369,10 +369,7 @@ var config = {
                     opacity: 1
                 }
             ],
-            onChapterExit: [{
-                layer: 'delhi_L1',
-                opacity: 0
-            }]
+            onChapterExit: []
         },
         {
             id: 'eighth-identifier',
@@ -380,7 +377,7 @@ var config = {
             hidden: false,
             //title: 'Chapter 8',
             //image: './path/to/image/source.png',
-            description: '<span class="year-text">Year: 2000</span> <br> <br> Twenty years ago, only a few <span class="highlight-grey">buildings</span> existed at the Delhi-Haryana border. The area was not so urbanised.',
+            description: '<span class="year-text">Year: 2000</span> <br> <br> Twenty years ago, Gurgaon barely existed, with only a few <span class="highlight-grey">buildings</span> at the Delhi-Haryana border.',
             location: {
                 center: [77.0266, 28.4595],
                 zoom: 9,
@@ -398,13 +395,10 @@ var config = {
                 },
                 {
                     layer: 'delhi_L1',
-                    opacity: 0
+                    opacity: 0.1
                 }
             ],
-            onChapterExit: [{
-                layer: 'delhi_L1',
-                opacity: 0
-            }]
+            onChapterExit: []
         },
         {
             id: 'eighth-mid-identifier',
@@ -412,7 +406,7 @@ var config = {
             hidden: false,
             //title: 'Chapter 8-mid',
             //image: './path/to/image/source.png',
-            description: '<span class="year-text">Year: 2022</span> <br> <br> Since then..',
+            description: '<span class="year-text">Year: 2022</span> <br> <br> Since then, a surge in demand for office spaces, commercial and residential <span class="highlight-grey">buildings</span> has led to a booming cityscape.',
             location: {
                 center: [77.0266, 28.4595],
                 zoom: 9,
@@ -430,7 +424,7 @@ var config = {
                 },
                 {
                     layer: 'delhi_L1',
-                    opacity: 0
+                    opacity: 0.1
                 }
             ],
             onChapterExit: [ 
@@ -441,10 +435,6 @@ var config = {
             {
                 layer: 'lulc2020',
                 opacity: 0
-            },
-            {
-                layer: 'delhi_L1',
-                opacity: 0
             }
         ]
         },
@@ -453,8 +443,8 @@ var config = {
             alignment: 'left',
             hidden: false,
             //title: 'Chapter 9',
-            //image: './path/to/image/source.png',
-            description: 'The growth is largely driven by private builders..  <span class="highlight-lightblue">DLF</span> - licenses. And what it means for the masses - jobs, homes,',
+            image: 'dlf-chart.png',
+            description: 'This growth is largely driven by private builders like <span class="highlight-lightblue">Delhi Land and Finance (DLF)</span>, which acquired land to build DLF City in Gurgaon, and now secured licenses to expand into New Gurgaon. <br><br> For the upper middle class of Delhi, this expansion continues to promise proximity to offices and access to modern housing and amenities.',
             location: {
                 center: [77.1007, 28.4650],
                 zoom: 10,
@@ -483,11 +473,11 @@ var config = {
                 },
                 {
                     layer: 'lulc2020',
-                    opacity: 0
+                    opacity: 0.4
                 },
                 {
                     layer: 'delhi_L1',
-                    opacity: 0
+                    opacity: 0.1
                 }
             ]
         }

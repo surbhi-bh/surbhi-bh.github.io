@@ -175,6 +175,20 @@
     text-shadow: 0 0 5px dimgrey;
 }
 
+#flourish {
+    width: 100%; /* Increased width to 90% */
+    max-width: 600px; /* Increased max-width */
+    min-height: 6vh; /* Increased min-height */
+    padding: 3vh 0; /* Increased padding */
+    text-align: center;
+    line-height: 1; /* Adjust line-height for better spacing between lines */
+    font-size: 18px; /* Increased font size */
+    position: relative;
+    z-index: 5;
+    background: transparent; /* Ensure background is transparent */
+    margin: 0 auto; /* Center horizontally */
+}
+
         #features {
             padding-top: 10vh;
             padding-bottom: 10vh;
@@ -606,8 +620,23 @@ function updateInsetLayer(bounds) {
 
 // setup resize event
 window.addEventListener('resize', scroller.resize);
-
 </script>
 
+<div  id="flourish">
+<div class="flourish-embed flourish-photo-slider" data-src="visualisation/18822152"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+</div>
+
+<div  id="footer">
+</p>
+   <p>Sources: <a href = "https://glad.umd.edu/dataset/GLCLUC2020"> Global Land Cover and Land Use 2000 and 2020</a>, University of Maryland. Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.</p>
+   <p>surbhibhatia1906[at]gmail[com]</a></p>
+   <p>
+       <a href="https://x.com/surbhaai" target="_blank" class="social-icon">
+           <i class="fab fa-twitter"></i>
+       </a>
+       <a href="https://github.com/surbhi-bh" target="_blank" class="social-icon">
+           <i class="fab fa-github"></i>
+       </a> 
+</div>
 </body>
 </html>
