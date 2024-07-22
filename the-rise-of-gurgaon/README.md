@@ -2,7 +2,7 @@
 
 ## This project is done as part of the Lede Program at Columbia University.
 
-The story webpage is here: https://surbhi-bh.github.io/moving-out-of-delhi-to-gurgaon/
+The story webpage is here: https://surbhi-bh.github.io/the-rise-of-gurgaon/
 
 ### Building this story
 This story is developed using Mapbox studio. It uses a mix of raster images, .tiff files, .csvs, and .geojson files which were cleaned, clipped and made presentable in QGIS.
