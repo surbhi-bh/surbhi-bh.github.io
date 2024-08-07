@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
   <style>
@@ -47,12 +48,14 @@
     margin: 0.2em 0; /* Minimal margin */
     padding: 0; /* Remove padding */
     line-height: 1; /* Adjust line height */
+    /* font-family: Montserrat; */
 }
 
 /* Additional adjustments for specific elements if needed */
 .content-head .date p,
 .content-head .byline p {
     margin: 0; /* Remove default margins */
+    font-size: 16px;
 }
 
 .content-head h1 {
@@ -66,9 +69,12 @@
 } */
 
 .trio {
-          width: 50%;
-          position: relative;
-          }
+      justify-content: right;
+      align-items: right;
+      max-width: 60%;
+      height: auto; /* Adjusts the image height to maintain aspect ratio */
+    }
+
 .content-head .subhead {
     font-size: 1.2em; /* Adjust font size if necessary */
 }
@@ -91,6 +97,8 @@
     figure {
       margin: 0;
       padding-bottom: 1.2em;
+      justify-content: center;
+      align-items: center;
     }
 
     figcaption {
@@ -120,7 +128,9 @@
     p {
       line-height: 1.6;
       margin: 0;
+      font-size: 14px;
       padding-bottom: 1.2em;
+      font-family: 'Montserrat';
     }
 
     ul {
@@ -161,7 +171,7 @@
                 0px 0px 10px rgba(0, 0, 0, 0.5); */
         }
     .with-image-bg {
-            background-image: url('banner.png');
+            background-image: url('./assets/banner.png');
             background-size: cover;
             height: 43vh; /* Adjust the height as needed */
             overflow: hidden; /* Ensures any overflow content is hidden */
@@ -205,35 +215,43 @@
 <div class = "container-fluid">
 <div class="content">
     
-  <p>We had to create another <code>class="content"</code> before the byline/after the header so everything would
-      line up okay.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p>
+  <p>This is some text. This is some text. This is some text. This is some text. This is some text. 
+    This is some text. This is some text. This is some text. This is some text. 
+    This is some text. This is some text. This is some text. This is some text. </p>
 
+    <p>This is some text. This is some text. This is some text. This is some text. This is some text. 
+      This is some text. This is some text. This is some text. This is some text. 
+      This is some text. This is some text. This is some text. This is some text. </p>
+      
+      <p>This is some text. This is some text. This is some text. This is some text. This is some text. 
+        This is some text. This is some text. This is some text. This is some text. 
+        This is some text. This is some text. This is some text. This is some text. </p>
+    
+
+  <figure>
+    <div class="taste-test" id="taste-test">
+    <img 
+      src="assets/taste-test.jpg">
+    <!-- <figcaption>This is an image caption</figcaption> -->
+  </figure>
+    
 
   <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
       cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
       repellendus.</p>
   <p>This has several differences with the other scrollytelling templates:</p>
-  <ul>
-      <li>There are some lines in <code>scrolly-styles.css</code> for <code>.sticky-thing</code> to make sure the
-          graphic is centered</li>
-      <li>This template has a <code>script</code> tag to add D3</li>
-      <li>It has ten thousand lines of ai2html</li>
-      <li>There's a lot of template JS code near the bottom for ai2html/scrollama</li>
-  </ul>
+ 
     <p>You will need <code><a href="scrolly-styles.css">scrolly-styles.css</a></code> for the page to work for you.</p>
     <p>Remove <code>debug: true</code> from the code near the bottom of the page to make the black lines go away, and
       <strong>make sure you change the background color of the overlays</strong>. Otherwise I will go crazy.
     </p>
   </div>
   <!-- <section id = "static-image" class = "static">
-    <img src="image1.png">
+    <img src="./assets/image1.png">
   </section> -->
   <section id="scrolly-images" class="scrolly-container">
     <div class="sticky-thing">
-      <img src="image1.png">
+      <img src="./assets/image1.png">
     </div>
     <div class="steps-container">
       <div class="step" id="step1">
@@ -269,7 +287,7 @@
       ratione voluptatem sequi nesciunt.</p>
     <figure>
       <img
-        src="kitkat_chart.png">
+        src="./assets/kitkat_chart.png">
       <!-- <figcaption>This is an image caption</figcaption> -->
     </figure>
     <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
@@ -287,7 +305,7 @@
   
   <section id="scrolly-images-two" class="scrolly-container-two">
     <div class="sticky-thing-new">
-      <img src="cadbury_base.png">
+      <img src="./assets/cadbury_base.png">
     </div>
     <div class="steps-container">
       <div class="step-new" id="step7">
@@ -310,13 +328,24 @@
       </div>
     </div>
   </section>
+    
+  <div class="content">
+  <p>This is some text. This is some text. This is some text. This is some text. This is some text. 
+    This is some text. This is some text. This is some text. This is some text. 
+    This is some text. This is some text. This is some text. This is some text. </p>
+      
+  <p>This is some text. This is some text. This is some text. This is some text. This is some text. 
+    This is some text. This is some text. This is some text. This is some text. 
+    This is some text. This is some text. This is some text. This is some text. </p>
+
+  
   <figure>
-    <div class="trio" id="trio">
     <img 
-      src="chocolate_differences_trio.svg">
+      src="./assets/chocolate_differences_trio.svg">
     <!-- <figcaption>This is an image caption</figcaption> -->
   </figure>
   </div>
+
   <div class="content">
     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
       corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
@@ -325,6 +354,30 @@
       cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
       repellendus.</p>
   </div>
+ <div class="full-width">
+    <figure>
+      <img
+        src="./assets/butyric-acid.png">
+      <!-- <figcaption>This is another image caption, but this time it's a full-width image</figcaption>
+    </figure> -->
+  </div>
+  <div class="content">
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+      corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+      qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
+      cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+      repellendus.</p>
+  
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+      corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+      qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
+      cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+      repellendus.</p>
+  </div>
+  
+
   <div class="footer">
     <div class="content">
       <p>You can find the code for this template <a href="https://github.com/jsoma/page-templates/">here</a>. Delete
@@ -400,45 +453,45 @@
     */
    
     d3.select("#step1").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image1.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "./assets/image1.png")
     })
 
     d3.select("#step2").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image2.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "./assets/image2.png")
     })
 
     d3.select("#step3").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image3.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "./assets/image3.png")
     })
 
     d3.select("#step4").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image4.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "./assets/image4.png")
     })
 
     d3.select("#step5").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image5.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "./assets/image5.png")
     })
  
     d3.select("#step6").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image6.png")
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "./assets/image6.png")
     })
 
     d3.select("#step7").on('stepin', (e) => {
       console.log("this is step 7")
-      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "cadbury_base.png")
+      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "./assets/cadbury_base.png")
     })
 
     d3.select("#step8").on('stepin', (e) => {
       console.log("this is step 7")
-      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "cadbury_one.png")
+      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "./assets/cadbury_one.png")
     })
 
     d3.select("#step9").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "cadbury_two.png")
+      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "./assets/cadbury_two.png")
     })
 
     d3.select("#step10").on('stepin', (e) => {
-      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "cadbury_three.png")
+      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "./assets/cadbury_three.png")
     })
 
     // d3.select("#step8").on('stepin', (e) => {
