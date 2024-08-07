@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chocolate wars!</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <style>
+          body {
+            margin: 0;
+            font-size: 20px;
+            font-family: 'Georgia',sans-serif;
+            text-rendering: optimizeLegibility;
+        }
+
+        .content {
+            max-width: 640px;
+            margin: auto;
+        }
+
+        .content-head {
+          background-color: rgba(244, 244, 244, 0.9); /* Grey with transparency */
+    padding: 1em; /* Padding around the text */
+    border-radius: 8px; /* Rounded corners */
+    width: 50%; /* Adjusted width */
+    color: black; /* Text color */
+    text-align: center; /* Center-align text */
+    line-height: 1.2; /* Adjust line height to make text closer */
+    margin: 0 auto; /* Center the element horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    font-family: 'Poppins',sans-serif; /* Font family */
+    padding: 1em; /* Adjusted padding */
+        }
+
+        /* Reduce margin and padding for inner elements */
+.content-head .date,
+.content-head h1,
+.content-head .subhead,
+.content-head .byline {
+    margin: 0.2em 0; /* Minimal margin */
+    padding: 0; /* Remove padding */
+    line-height: 1; /* Adjust line height */
+}
+
+/* Additional adjustments for specific elements if needed */
+.content-head .date p,
+.content-head .byline p {
+    margin: 0; /* Remove default margins */
+}
+
+.content-head h1 {
+    font-size: 2em; /* Adjust font size if necessary */
+}
+
+/* div.container-fluid{
+  padding-left:0px;
+  padding-right:0px;
+  background-color:rgb(218, 217, 217, 0.5);
+} */
+
+.trio {
+          width: 50%;
+          position: relative;
+          }
+.content-head .subhead {
+    font-size: 1.2em; /* Adjust font size if necessary */
+}
+    .header {
+      padding: 3em 0;
+    }
+
+    a {
+      color: #f05349;
+    }
+
+    .footer {
+      background: #f4f4f4;
+      text-align: center;
+      font-size: 0.8em;
+      margin-top: 4em;
+      padding: 4em 0;
+    }
+
+    figure {
+      margin: 0;
+      padding-bottom: 1.2em;
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      text-align: center;
+      margin-top: 0.5em;
+      color: #666;
+    }
+
+    h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: bold;
+      font-size: 3em;
+      line-height: 1.1;
+    }
+
+    .subhead {
+      font-family: 'Lora', Georgia, serif;
+    }
+
+    iframe,
+    img,
+    video {
+      max-width: 100%;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 0;
+      padding-bottom: 1.2em;
+    }
+
+    ul {
+      margin: 0;
+      padding-bottom: 1em;
+      line-height: 1.6;
+    }
+
+    iframe {
+      padding-bottom: 1.2em;
+    }
+
+    .full-width figure {
+      text-align: center;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      background: #fff880;
+    }
+
+    .with-image-bg {
+            position: relative;
+            background-size: cover;
+            margin-bottom: 1em;
+            padding: 40;
+
+            /* Center everything inside */
+            min-height: 20svh;
+            display: flex;
+            background-size: contain;
+            justify-content: center;
+            align-items: center;
+
+            /* White text with a shadow */
+            color: white;
+            /* text-shadow: 0px 0px 30px black,
+                0px 0px 10px rgba(0, 0, 0, 0.5); */
+        }
+    .with-image-bg {
+            background-image: url('banner.png');
+            background-size: cover;
+            height: 43vh; /* Adjust the height as needed */
+            overflow: hidden; /* Ensures any overflow content is hidden */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    /* margin on mobile */
+    @media (max-width: 640px) {
+      body {
+        font-size: 18px;
+      }
+
+      .content {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+      }
+    }
+  </style>
+  <link href="scrolly-styles.css" rel="stylesheet">
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+</head>
+
+<body>
+  <div class="header with-image-bg">
+    <div class="content-head">
+        <!-- <div class="date">
+          
+        </div> -->
+        <h1>Battle of the chocolate bars</h1>
+        <p class="subhead">Same same but different</p>
+        <div class="byline">
+            <p>By Surbhi Bhatia</p>
+            <p>Aug 4, 2024</a></p>
+        </div>
+    </div>
+</div>
+<div class = "container-fluid">
+<div class="content">
+    
+  <p>We had to create another <code>class="content"</code> before the byline/after the header so everything would
+      line up okay.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</p>
+
+
+  <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
+      cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+      repellendus.</p>
+  <p>This has several differences with the other scrollytelling templates:</p>
+  <ul>
+      <li>There are some lines in <code>scrolly-styles.css</code> for <code>.sticky-thing</code> to make sure the
+          graphic is centered</li>
+      <li>This template has a <code>script</code> tag to add D3</li>
+      <li>It has ten thousand lines of ai2html</li>
+      <li>There's a lot of template JS code near the bottom for ai2html/scrollama</li>
+  </ul>
+    <p>You will need <code><a href="scrolly-styles.css">scrolly-styles.css</a></code> for the page to work for you.</p>
+    <p>Remove <code>debug: true</code> from the code near the bottom of the page to make the black lines go away, and
+      <strong>make sure you change the background color of the overlays</strong>. Otherwise I will go crazy.
+    </p>
+  </div>
+  <!-- <section id = "static-image" class = "static">
+    <img src="image1.png">
+  </section> -->
+  <section id="scrolly-images" class="scrolly-container">
+    <div class="sticky-thing">
+      <img src="image1.png">
+    </div>
+    <div class="steps-container">
+      <div class="step" id="step1">
+        <div>
+          <p>Step one, adjust the CSS at the bottom of this page to change spacing between steps.</p>
+          <p>Here is some more text, in case there are multiple paragraphs.</p>
+        </div>
+      </div>
+      <div class="step" id="step2">
+        <p>Find the JavaScript code near the bottom to associate each step with an image change.</p>
+      </div>
+      <div class="step" id="step3">
+        <p>By default, the steps are a set width and the text is left-centered. Find the rule in
+          <code>scrolly-styles.css</code> that refers to <code>.step > *</code> to adjust or remove the width, center
+          the text, or change the background color/opacity.
+        </p>
+      </div>
+      <div class="step" id="step4">
+        <p>Step four, lorem ipsum dolor sic amet.</p>
+      </div>
+      <div class="step" id="step5">
+        <p>Step five, lorem ipsum dolor sic amet.</p>
+      </div>
+      <div class="step" id="step6">
+        <p>Step six, lorem ipsum dolor sic amet.</p>
+      </div>
+    </div>
+  </section>
+  <div class="content">
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+      aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+      enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+      ratione voluptatem sequi nesciunt.</p>
+    <figure>
+      <img
+        src="kitkat_chart.png">
+      <!-- <figcaption>This is an image caption</figcaption> -->
+    </figure>
+    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+      numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+      veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? <br> <br><br> 
+    </p>
+  </div>
+  <!-- <div class="full-width">
+    <figure>
+      <img
+        src="https://static01.nyt.com/images/2024/02/01/multimedia/01eu-hungary-orban-2-ghkw/01eu-hungary-orban-2-ghkw-superJumbo.jpg?quality=75&auto=webp">
+      <figcaption>This is another image caption, but this time it's a full-width image</figcaption>
+    </figure>
+  </div> -->
+  
+  <section id="scrolly-images-two" class="scrolly-container-two">
+    <div class="sticky-thing-new">
+      <img src="cadbury_base.png">
+    </div>
+    <div class="steps-container">
+      <div class="step-new" id="step7">
+        <div>
+          <p>Step one, adjust the CSS at the bottom of this page to change spacing between steps.</p>
+          <p>Here is some more text, in case there are multiple paragraphs.</p>
+        </div>
+      </div>
+      <div class="step-new" id="step8">
+        <p>Find the JavaScript code near the bottom to associate each step with an image change.</p>
+      </div>
+      <div class="step-new" id="step9">
+        <p>By default, the steps are a set width and the text is left-centered. Find the rule in
+          <code>scrolly-styles.css</code> that refers to <code>.step > *</code> to adjust or remove the width, center
+          the text, or change the background color/opacity.
+        </p>
+      </div>
+      <div class="step-new" id="step10">
+        <p>Step four, lorem ipsum dolor sic amet.</p>
+      </div>
+    </div>
+  </section>
+  <figure>
+    <div class="trio" id="trio">
+    <img 
+      src="chocolate_differences_trio.svg">
+    <!-- <figcaption>This is an image caption</figcaption> -->
+  </figure>
+  </div>
+  <div class="content">
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+      corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+      qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
+      cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+      repellendus.</p>
+  </div>
+  <div class="footer">
+    <div class="content">
+      <p>You can find the code for this template <a href="https://github.com/jsoma/page-templates/">here</a>. Delete
+        these lines
+        when you use it, and don't forget to change the <code>title</code> tag!!!</p>
+    </div>
+  </div>
+</div>
+  <script>
+    /*************
+    
+    This is the JavaScript that makes the scrolly work 
+    
+    *************/
+
+    /* 
+    This part attaches a scroll to the element with id="scrolly-images"    
+    */
+    (() => {
+      const scroller = scrollama()
+
+      scroller
+        .setup({
+          parent: document.querySelector("#scrolly-images"),
+          step: ".step",
+          offset: 1,
+          debug: false,
+        })
+        .onStepEnter(function ({ element, index, direction }) {
+          const event = new CustomEvent("stepin", { detail: { direction: direction } })
+          element.dispatchEvent(event)
+        })
+        .onStepExit(function ({ element, index, direction }) {
+          const event = new CustomEvent("stepout", { detail: { direction: direction } })
+          if (direction === "up" && element.previousElementSibling) {
+            const event = new CustomEvent("stepin", { detail: { direction: direction } })
+            element.previousElementSibling.dispatchEvent(event)
+          }
+        })
+
+      window.addEventListener("resize", scroller.resize)
+
+
+      const scroller_new = scrollama()
+      
+      scroller_new
+        .setup({
+          parent: document.querySelector("#scrolly-images-two"),
+          step: ".step-new",
+          offset: 1,
+          debug: false,
+        })
+        .onStepEnter(function ({ element, index, direction }) {
+          const event = new CustomEvent("stepin", { detail: { direction: direction } })
+          element.dispatchEvent(event)
+        })
+        .onStepExit(function ({ element, index, direction }) {
+          const event = new CustomEvent("stepout", { detail: { direction: direction } })
+          if (direction === "up" && element.previousElementSibling) {
+            const event = new CustomEvent("stepin", { detail: { direction: direction } })
+            element.previousElementSibling.dispatchEvent(event)
+          }
+        })
+
+      window.addEventListener("resize", scroller_new.resize)
+
+    })()
+
+    
+
+    /*
+    This part sets up your actions. In this case, it's changing the image in the scrolly container.
+    */
+   
+    d3.select("#step1").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image1.png")
+    })
+
+    d3.select("#step2").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image2.png")
+    })
+
+    d3.select("#step3").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image3.png")
+    })
+
+    d3.select("#step4").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image4.png")
+    })
+
+    d3.select("#step5").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image5.png")
+    })
+ 
+    d3.select("#step6").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "image6.png")
+    })
+
+    d3.select("#step7").on('stepin', (e) => {
+      console.log("this is step 7")
+      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "cadbury_base.png")
+    })
+
+    d3.select("#step8").on('stepin', (e) => {
+      console.log("this is step 7")
+      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "cadbury_one.png")
+    })
+
+    d3.select("#step9").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "cadbury_two.png")
+    })
+
+    d3.select("#step10").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "cadbury_three.png")
+    })
+
+    // d3.select("#step8").on('stepin', (e) => {
+    //   d3.select(e.target.closest(".scrolly-container-two")).select("img").attr("src", "new_image2.png")
+    // })
+  </script>
+  <style>
+    /* Change this to adjust the padding between steps */
+    .step {
+      margin-bottom: 70vh;
+    }
+  </style>
+
+</body>
+
+</html>
