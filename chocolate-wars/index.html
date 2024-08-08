@@ -86,13 +86,40 @@
       color: #f05349;
     }
 
-    .footer {
-      background: #f4f4f4;
-      text-align: center;
-      font-size: 0.8em;
-      margin-top: 4em;
-      padding: 4em 0;
-    }
+  
+    #footer {
+            width: 100%;
+    min-height: 5vh;
+    padding: 2vh 0;
+    text-align: center;
+    line-height: 1; /* Adjust line-height for better spacing between lines */
+    font-size: 16px; /* Increase font size */
+    position: relative;
+    z-index: 5;
+        }
+
+        #footer::before {
+    content: "";
+    position: absolute;
+    top: 0; /* Position the line at the top of the footer */
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%); /* Offset by half of its width to ensure centering */
+    width: 60%; /* Line width as 80% of the screen */
+    height: 1px; /* Line height */
+    background: #d3d3d3; /* Light grey color */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Light shadow for the line */
+}
+
+
+        #footer a {
+    color: #e3735f; /* Set color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+#footer a:hover {
+    color: black;
+    text-shadow: 0 0 5px dimgrey;
+}
 
     figure {
       margin: 0;
@@ -103,9 +130,10 @@
 
     figcaption {
       font-size: 0.8em;
-      text-align: center;
+      text-align: left;
+      font-family: 'Montserrat';
       margin-top: 0.5em;
-      color: #666;
+      /* color: #666; */
     }
 
     h1 {
@@ -118,6 +146,7 @@
     .subhead {
       font-family: 'Lora', Georgia, serif;
     }
+    
 
     iframe,
     img,
@@ -129,6 +158,7 @@
       line-height: 1.6;
       margin: 0;
       font-size: 14px;
+      color: black;
       padding-bottom: 1.2em;
       font-family: 'Montserrat';
     }
@@ -143,14 +173,22 @@
       padding-bottom: 1.2em;
     }
 
-    .full-width figure {
-      text-align: center;
+    .flourish-embed {
+      margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* max-height: 40%; */ 
+            /* width: 80vw; /* Adjust width as needed */
+            /* height: 80vh; Adjust height as needed */ */
     }
 
     code {
       font-family: 'Courier New', monospace;
       background: #fff880;
     }
+
 
     .with-image-bg {
             position: relative;
@@ -215,18 +253,13 @@
 <div class = "container-fluid">
 <div class="content">
     
-  <p>This is some text. This is some text. This is some text. This is some text. This is some text. 
-    This is some text. This is some text. This is some text. This is some text. 
-    This is some text. This is some text. This is some text. This is some text. </p>
+  <p>When I offered a Kit Kat to a German friend in the classroom this summer in New York, she outright refused. </p>
 
-    <p>This is some text. This is some text. This is some text. This is some text. This is some text. 
-      This is some text. This is some text. This is some text. This is some text. 
-      This is some text. This is some text. This is some text. This is some text. </p>
-      
-      <p>This is some text. This is some text. This is some text. This is some text. This is some text. 
-        This is some text. This is some text. This is some text. This is some text. 
-        This is some text. This is some text. This is some text. This is some text. </p>
-    
+ <p> <i>"Chocolates in the US taste like wax! European chocolates are far superior" </i></p>
+
+ <p>I knew I had to find out for myself. </p>
+
+<p> So, to be the *unbiased* judge of this sweet debate, I set up a taste test.  Two chocolates, with identical names, to see if people liked them equally. </p>
 
   <figure>
     <div class="taste-test" id="taste-test">
@@ -341,7 +374,7 @@
   
   <figure>
     <img 
-      src="./assets/chocolate_differences_trio.svg">
+      src="./assets/chocolate_differences.png">
     <!-- <figcaption>This is an image caption</figcaption> -->
   </figure>
   </div>
@@ -368,7 +401,20 @@
     <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
       cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor
       repellendus.</p>
+    </div>
+
+    <div class="content">
+      <figure>
+        <figcaption>This is another image caption, but this time it's a full-width image</figcaption>
+      <div class="flourish-embed flourish-hierarchy" data-src="visualisation/18990072" data-width="740%">
+        <script src="https://public.flourish.studio/resources/embed.js"></script></div>
+</div>
+</figure>
+</div>
+
+
   
+  <div class="content">
     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
       corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
       qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
@@ -377,13 +423,19 @@
       repellendus.</p>
   </div>
   
-
-  <div class="footer">
-    <div class="content">
-      <p>You can find the code for this template <a href="https://github.com/jsoma/page-templates/">here</a>. Delete
-        these lines
-        when you use it, and don't forget to change the <code>title</code> tag!!!</p>
-    </div>
+  <br>
+  <div  id="footer">
+  </p>
+     <!-- <p>Sources: <a href = "https://glad.umd.edu/dataset/GLCLUC2020"> Global Land Cover and Land Use 2000 and 2020</a>, University of Maryland. Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.</p> -->
+     <p>Github repo for this project <a href="https://github.com/surbhi-bh/surbhi-bh.github.io/tree/master/the-rise-of-gurgaon" style="color: #DC5014; text-decoration: underline;">available here</a>.</p>
+     <p>surbhibhatia1906[at]gmail[com]</a></p>
+     <p>
+         <a href="https://x.com/surbhaai" target="_blank" class="social-icon">
+             <i class="fab fa-twitter"></i>
+         </a>
+         <a href="https://github.com/surbhi-bh" target="_blank" class="social-icon">
+             <i class="fab fa-github"></i>
+         </a> 
   </div>
 </div>
   <script>
