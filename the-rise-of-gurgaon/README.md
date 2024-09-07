@@ -1,4 +1,4 @@
-# Story II: How the Gurgaon emerged as India's millenium city at the edge of Delhi
+# Story II: How Gurgaon emerged as India's millenium city at the edge of Delhi
 
 ## This project is done as part of the Lede Program at Columbia University.
 
