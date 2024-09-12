@@ -133,7 +133,7 @@
     /* transition: opacity 1s ease-in, transform 0.3s ease-in-out; */
     padding: 1.2em 1.5em !important;
     background-color: rgb(230, 220, 220);
-    color: #9b2727; /* Lighter text color for better readability */
+    color:  black; /* Lighter text color for better readability */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }
@@ -163,7 +163,7 @@
     /* transition: opacity 1s ease-in, transform 0.3s ease-in-out; */
     padding: 1.2em 1.5em !important;
     background-color: rgb(230, 220, 220);
-    color: #88369f; /* Lighter text color for better readability */
+    color: black; /* Lighter text color for better readability */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }
