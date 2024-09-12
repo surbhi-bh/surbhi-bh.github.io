@@ -37,8 +37,8 @@
     z-index: 0;
     height: 80svh;
     width: 100vw;
-    margin-top: -95px;
-    margin-bottom: -95px;
+    /* margin-top: -95px; */
+    /* margin-bottom: -95px; */
     overflow: hidden;
     display: flex; /* Center everything inside */
     justify-content: center; /* Center everything inside */
@@ -52,6 +52,19 @@
     display: block;  
     margin-left: auto;
     margin-right: auto;
+}
+
+.radar img {
+    max-width: 100%; /* Ensures image doesn't exceed the container width */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes the default inline spacing */
+    margin-left: auto;
+    margin-right: auto; /* Centers the image horizontally */
+}
+
+.radar {
+    width: 60%; /* Adjust the radar container width */
+    margin: 0 auto; /* Centers the radar container */
 }
 
 .video-container {
