@@ -52,7 +52,8 @@ function setup() {
 }
 
 function draw() {
-  background(255, 255, 255, 0)
+  clear();
+  noStroke();  // Disable borders for all elements
   textSize(16);
   textAlign(LEFT);
   fill(0); // Set text color to black
@@ -216,18 +217,13 @@ function selectCity(city) {
 
 function stopMusicAndAnimation() {
   clearInterval(cityTimelineInterval);
-  
-  // Stop all oscillators, but keep the selected city intact
   for (let city in oscillators) {
     for (let date in oscillators[city]) {
       let oscillator = oscillators[city][date];
       oscillator.stop();
     }
   }
-  
-  // Set the music flag to false, but keep the selected city active
   isMusicPlaying = false;
-
-  // Redraw to reflect changes
-  //redraw();
+  selectedCity = null;
+  redraw();
 }
