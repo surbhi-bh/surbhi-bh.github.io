@@ -15,7 +15,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%; /* Ensure full height */
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow:scroll;
 }
 
 #canvas-container {
@@ -41,7 +41,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   height: 100vh;
-  overflow: hidden;
+  overflow:scroll;
 }
 
 canvas {
