@@ -1,4 +1,17 @@
 /* General styles */
+@font-face {
+  font-family: 'GameOfThrones';
+  src: url('../got.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'GameOfThrones', sans-serif;
+  font-size: 3em;
+  text-align: center;
+  color: #333;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -11,6 +24,10 @@ body {
   justify-content: flex-start;
   height: 100vh;
   overflow: hidden;
+}
+canvas {
+  border: none;
+  outline: none;
 }
 
 button {
@@ -25,6 +42,7 @@ button {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
+
 
 button:hover {
   background-color: #0056b3;
