@@ -17,15 +17,11 @@ function preload() {
   data = loadTable(url, "csv", "header");
 }
 
-function setup() {
-  let canvas = createCanvas(1000, 800);
-  canvas.parent("canvas-container"); // Attach canvas to the container
-}
 
 function setup() {
-//   clear();
-//   createCanvas(1000, 800);
-//   canvas.style.border = 'none';
+  clear();
+  createCanvas(1000, 800);
+  canvas.style.border = 'none';
   
 
   let rows = data.getRows();
