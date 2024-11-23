@@ -52,7 +52,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(255, 255, 255, 0)
   textSize(16);
   textAlign(LEFT);
   fill(0); // Set text color to black
@@ -229,5 +229,5 @@ function stopMusicAndAnimation() {
   isMusicPlaying = false;
 
   // Redraw to reflect changes
-  // redraw();
+  //redraw();
 }
