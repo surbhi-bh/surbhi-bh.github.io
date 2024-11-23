@@ -19,6 +19,7 @@ function preload() {
 
 function setup() {
   createCanvas(1000, 800);
+  canvas.style.border = 'none';
 
   let rows = data.getRows();
   rows.forEach((row) => {
