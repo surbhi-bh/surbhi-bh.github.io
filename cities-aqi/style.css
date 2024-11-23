@@ -25,10 +25,14 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+
 canvas {
   border: none;
-  outline: none;
+  display: block; /* Make sure the canvas is not inline */
+  margin: 0 auto; /* Center the canvas horizontally */
+  background: transparent; /* Optional: Set a transparent background if desired */
 }
+
 
 button {
   background-color: #007BFF;
