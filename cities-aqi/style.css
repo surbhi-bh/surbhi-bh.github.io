@@ -11,6 +11,24 @@ h1 {
   color: #333;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+#canvas-container {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+footer {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
 
 body {
   margin: 0;

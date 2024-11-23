@@ -18,9 +18,14 @@ function preload() {
 }
 
 function setup() {
-  clear();
-  createCanvas(1000, 800);
-  canvas.style.border = 'none';
+  let canvas = createCanvas(1000, 800);
+  canvas.parent("canvas-container"); // Attach canvas to the container
+}
+
+function setup() {
+//   clear();
+//   createCanvas(1000, 800);
+//   canvas.style.border = 'none';
   
 
   let rows = data.getRows();
