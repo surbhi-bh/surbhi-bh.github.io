@@ -18,8 +18,10 @@ function preload() {
 }
 
 function setup() {
+  clear();
   createCanvas(1000, 800);
   canvas.style.border = 'none';
+  
 
   let rows = data.getRows();
   rows.forEach((row) => {
@@ -97,7 +99,7 @@ function drawCentralVisualization(city, date) {
 }
 
 function drawSmallMultiplesGrid(date) {
-  let cols = 3;
+  let cols = 3; // Number of columns
   let cellWidth = width / cols;
   let cellHeight = height / (ceil(citiesSorted.length / cols) + 4);
   let startY = height / 2 + 150;
@@ -105,13 +107,17 @@ function drawSmallMultiplesGrid(date) {
   citiesSorted.forEach((city, index) => {
     let col = index % cols;
     let row = floor(index / cols);
-    let x = col * cellWidth + cellWidth / 2;
-    let y = startY + row * cellHeight + cellHeight / 2;
+    let x = col * cellWidth + cellWidth / 2; // Center X of the cell
+    let y = startY + row * cellHeight + cellHeight / 2; // Center Y of the cell
 
     drawConcentricCircle(city, date, x, y, min(cellWidth, cellHeight) / 2 - 20);
 
     if (cityButtons[index]) {
-      cityButtons[index].position(x - 40, y + min(cellWidth, cellHeight) / 2);
+      let buttonWidth = 80; // Approximate button width for centering
+      cityButtons[index].position(
+        x - buttonWidth / 2, // Center the button below the circle
+        y + min(cellWidth, cellHeight) / 2 + 10 // Position below the circle with spacing
+      );
     }
 
     if (selectedCity === city) {
@@ -123,6 +129,33 @@ function drawSmallMultiplesGrid(date) {
     }
   });
 }
+// function drawSmallMultiplesGrid(date) {
+//   let cols = 3;
+//   let cellWidth = width / cols;
+//   let cellHeight = height / (ceil(citiesSorted.length / cols) + 4);
+//   let startY = height / 2 + 150;
+
+//   citiesSorted.forEach((city, index) => {
+//     let col = index % cols;
+//     let row = floor(index / cols);
+//     let x = col * cellWidth + cellWidth / 2;
+//     let y = startY + row * cellHeight + cellHeight / 2;
+
+//     drawConcentricCircle(city, date, x, y, min(cellWidth, cellHeight) / 2 - 20);
+
+//     if (cityButtons[index]) {
+//       cityButtons[index].position(x - 40, y + min(cellWidth, cellHeight) / 2);
+//     }
+
+//     if (selectedCity === city) {
+//       noStroke();
+//       fill(200, 200, 200, 50);
+//       rectMode(CENTER);
+//       let boxSize = min(cellWidth, cellHeight) - 20;
+//       rect(x, y, boxSize, boxSize);
+//     }
+//   });
+// }
 
 function drawConcentricCircle(city, date, centerX, centerY, maxRadius) {
   let categories = [
