@@ -1,12 +1,15 @@
-let data; // Global variable for the data
-let allDates = []; // Store all unique dates
-let cityData = {}; // Store data grouped by city
-let dateSlider; // Slider to select date
-let currentDayIndex = 0; // Track selected day
-let oscillators = {}; // Store oscillators for each city and date
-let selectedCity = null; // Track selected city
-let cityTimelineInterval; // Store the interval for the city timeline
-let stopButton; // Button to stop the music
+let data;
+let allDates = [];
+let cityData = {};
+let dateSlider;
+let currentDayIndex = 0;
+let oscillators = {};
+let selectedCity = null;
+let cityTimelineInterval;
+let citiesSorted = [];
+let cityButtons = [];
+let isMusicPlaying = false;
+let stopButton;
 
 function preload() {
   let url =
@@ -17,7 +20,6 @@ function preload() {
 function setup() {
   createCanvas(1000, 800);
 
-  // Group data by city and extract unique dates
   let rows = data.getRows();
   rows.forEach((row) => {
     let city = row.get("City");
@@ -30,80 +32,94 @@ function setup() {
     if (!allDates.includes(date)) allDates.push(date);
   });
 
-  allDates.sort(); // Sort dates
+  allDates.sort();
+  citiesSorted = Object.keys(cityData).sort();
 
-  // Create a slider to select the date
   dateSlider = createSlider(0, allDates.length - 1, 0, 1);
-  dateSlider.position(20, height - 40);
   dateSlider.style("width", "300px");
   dateSlider.input(() => {
-    currentDayIndex = dateSlider.value(); // Update the current day
-    redraw(); // Redraw with the new date
+    currentDayIndex = dateSlider.value();
+    redraw();
   });
 
-  // Create city buttons
+  noLoop();
+
   createCityButtons();
 
-  // Create Stop Music button
-  stopButton = createButton("Stop Music");
-  stopButton.position(20, height - 100);
-  stopButton.id("stop-button");
-  stopButton.mousePressed(stopMusic);
-
-  noLoop(); // Only draw when slider changes
+  stopButton = createButton("Stop");
+  stopButton.position(width / 2 - 50, height / 2 + 90); // Position below slider
+  stopButton.mousePressed(stopMusicAndAnimation);
 }
 
 function draw() {
   background(255);
   textSize(16);
   textAlign(LEFT);
-  fill(0);
+  fill(0); // Set text color to black
 
-  // Format the date as "Oct 23, 2024"
   let selectedDate = allDates[currentDayIndex];
   let formattedDate = formatDate(selectedDate);
 
-  text(`Date: ${formattedDate}`, 20, height - 60);
+  if (selectedCity) {
+    drawCentralVisualization(selectedCity, selectedDate);
+  }
 
-  let cities = Object.keys(cityData).slice(0, 6); // Limit to 6 cities for a 3x2 grid
-  let cols = 3; // Fixed columns
-  let rows = 2; // Fixed rows
+  if (selectedCity) {
+    let sliderX = width / 2 - dateSlider.width / 2;
+    let sliderY = height / 2 + 50;
+    dateSlider.position(sliderX, sliderY);
+
+    // Display the date in plain black text
+    textAlign(CENTER);
+    fill(0); // Ensure the text is black
+    text(`${formattedDate}`, sliderX + dateSlider.width / 2, sliderY - 10); // Date as plain text
+  }
+
+  drawSmallMultiplesGrid(selectedDate);
+}
+
+function formatDate(dateString) {
+  let dateParts = dateString.split("-");
+  let year = dateParts[0];
+  let monthIndex = parseInt(dateParts[1], 10) - 1;
+  let day = dateParts[2];
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${monthNames[monthIndex]} ${parseInt(day)}, ${year}`;
+}
+
+function drawCentralVisualization(city, date) {
+  let maxRadius = 200;
+  let centerX = width / 2;
+  let centerY = height / 3 - 50;
+  drawConcentricCircle(city, date, centerX, centerY, maxRadius);
+}
+
+function drawSmallMultiplesGrid(date) {
+  let cols = 3;
   let cellWidth = width / cols;
-  let cellHeight = height / rows;
+  let cellHeight = height / (ceil(citiesSorted.length / cols) + 4);
+  let startY = height / 2 + 150;
 
-  cities.forEach((city, index) => {
+  citiesSorted.forEach((city, index) => {
     let col = index % cols;
     let row = floor(index / cols);
-    let x = col * cellWidth + cellWidth / 2; // Center of the cell
-    let y = row * cellHeight + cellHeight / 2;
+    let x = col * cellWidth + cellWidth / 2;
+    let y = startY + row * cellHeight + cellHeight / 2;
 
-    drawConcentricCircle(city, selectedDate, x, y, min(cellWidth, cellHeight) / 2 - 20); // Adjust size to fit
+    drawConcentricCircle(city, date, x, y, min(cellWidth, cellHeight) / 2 - 20);
 
-    // Highlight selected city with a transparent light grey rectangle
+    if (cityButtons[index]) {
+      cityButtons[index].position(x - 40, y + min(cellWidth, cellHeight) / 2);
+    }
+
     if (selectedCity === city) {
-      noStroke(); // No border
-      fill(200, 200, 200, 50); // Very light grey with transparency
+      noStroke();
+      fill(200, 200, 200, 50);
       rectMode(CENTER);
-      let maxRadius = min(cellWidth, cellHeight) / 2 - 20;
-      let boxSize = maxRadius * 2;
+      let boxSize = min(cellWidth, cellHeight) - 20;
       rect(x, y, boxSize, boxSize);
     }
   });
-}
-
-// Function to format the date as "Oct 23, 2024"
-function formatDate(dateString) {
-  let dateParts = dateString.split('-'); // Split the date by the dash
-  let year = dateParts[0];
-  let monthIndex = parseInt(dateParts[1], 10) - 1; // Month index (0-based)
-  let day = dateParts[2];
-
-  // Array of month names
-  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
-  // Format the date as "Oct 23, 2024"
-  let formattedDate = `${monthNames[monthIndex]} ${parseInt(day)}, ${year}`;
-  return formattedDate;
 }
 
 function drawConcentricCircle(city, date, centerX, centerY, maxRadius) {
@@ -125,7 +141,9 @@ function drawConcentricCircle(city, date, centerX, centerY, maxRadius) {
   let residualAQI = aqi;
 
   if (selectedCity === city) {
-    if (!oscillators[city]) oscillators[city] = {};
+    if (!oscillators[city]) {
+      oscillators[city] = {};
+    }
     if (!oscillators[city][date]) {
       oscillators[city][date] = new p5.Oscillator("sine");
       oscillators[city][date].start();
@@ -144,8 +162,9 @@ function drawConcentricCircle(city, date, centerX, centerY, maxRadius) {
     noFill();
     stroke(200);
     strokeWeight(1);
-    drawingContext.setLineDash([5, 5]);
+    drawingContext.setLineDash([5, 5]); // Dashed line for concentric circles
     ellipse(centerX, centerY, radius * 2, radius * 2);
+    drawingContext.setLineDash([]); // Reset to solid line for other elements
 
     let lower = category.range[0];
     let upper = category.range[1];
@@ -170,50 +189,45 @@ function drawConcentricCircle(city, date, centerX, centerY, maxRadius) {
       ellipse(x, y, 5, 5);
     }
   });
-
-  textAlign(CENTER);
-  fill(0);
-  textSize(14);
-  text(`${city}\nAQI: ${aqi}`, centerX, centerY + maxRadius + 20);
-}
-
-function stopMusic() {
-  Object.keys(oscillators).forEach((city) => {
-    Object.keys(oscillators[city]).forEach((date) => {
-      let oscillator = oscillators[city][date];
-      if (oscillator) {
-        oscillator.amp(0, 0.5);
-        oscillator.stop();
-        delete oscillators[city][date];
-      }
-    });
-  });
-
-  if (cityTimelineInterval) {
-    clearInterval(cityTimelineInterval);
-    cityTimelineInterval = null;
-  }
-
-  selectedCity = null;
 }
 
 function createCityButtons() {
-  let cities = Object.keys(cityData);
-  cities.forEach((city, index) => {
+  citiesSorted.forEach((city, index) => {
     let button = createButton(city);
-    button.position(20 + index * 100, 20);
-    button.mousePressed(() => {
-      if (cityTimelineInterval) {
-        clearInterval(cityTimelineInterval);
-      }
-
-      selectedCity = city;
-      cityTimelineInterval = setInterval(() => {
-        currentDayIndex = (currentDayIndex + 1) % allDates.length;
-        dateSlider.value(currentDayIndex);
-        redraw();
-      }, 1000);
-    });
+    button.mousePressed(() => selectCity(city));
     button.addClass("city-button");
+    cityButtons.push(button);
   });
+}
+
+function selectCity(city) {
+  selectedCity = city;
+  currentDayIndex = 0;
+  dateSlider.value(currentDayIndex);
+  redraw();
+
+  if (cityTimelineInterval) clearInterval(cityTimelineInterval);
+  cityTimelineInterval = setInterval(() => {
+    currentDayIndex = (currentDayIndex + 1) % allDates.length;
+    dateSlider.value(currentDayIndex);
+    redraw();
+  }, 1000); // Speed up by reducing the interval to 1 second
+}
+
+function stopMusicAndAnimation() {
+  clearInterval(cityTimelineInterval);
+  
+  // Stop all oscillators, but keep the selected city intact
+  for (let city in oscillators) {
+    for (let date in oscillators[city]) {
+      let oscillator = oscillators[city][date];
+      oscillator.stop();
+    }
+  }
+  
+  // Set the music flag to false, but keep the selected city active
+  isMusicPlaying = false;
+
+  // Redraw to reflect changes
+  // redraw();
 }
