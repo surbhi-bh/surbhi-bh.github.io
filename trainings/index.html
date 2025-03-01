@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talks and Trainings - Surbhi Bhatia</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Center content styles */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1, p {
+            text-align: center;
+        }
+        
+        /* Fixed image size and positioning */
+        .center-image {
+            display: flex;
+            justify-content: center;
+            margin: 2rem auto;
+        }
+        
+        .center-image img {
+            width: 600px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Training containers */
+        #trainings-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 2rem 0;
+        }
+        
+        .training-box {
+            display: flex;
+            align-items: center;
+            background-color: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .training-box:hover {
+            background-color: #EAAAAC;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-color: #EAAAAC;
+        }
+        
+        .training-info {
+            flex: 1;
+        }
+        
+        .training-box h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: black;
+        }
+        
+        .training-box p {
+            margin-bottom: 5px;
+            text-align: left;
+            color: #666;
+        }
+        
+        .training-meta {
+            min-width: 120px;
+            text-align: right;
+            padding-left: 20px;
+        }
+        
+        .training-date {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .training-location {
+            font-style: italic;
+            color: #888;
+        }
+        
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #888;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .training-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .training-meta {
+                text-align: center;
+                padding-left: 0;
+                padding-top: 10px;
+            }
+            
+            .training-box p {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <a href="/"><img src="../assets/name.png" alt="Surbhi Bhatia"></a>
+        </div>
+
+        <nav id="topNav">
+            <ul class="main-nav">
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/trainings" class="active">Talks and Trainings</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Talks and Trainings</h1>
+        <p>Welcome to my Talks and Trainings page! Here, I share insights from my workshops, presentations, and mentorship sessions.</p>
+
+        <!-- Centered Image -->
+        <div class="center-image">
+            <img src="../assets/training.jpeg" alt="Training Session">
+        </div>
+
+        <!-- Trainings Container -->
+        <div id="trainings-container">
+            <div class="loading">Loading training sessions...</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script src="../footer.js"></script>
+
+    <!-- Google Sheets Integration Script -->
+    <script>
+        // Function to fetch and display trainings from Google Sheets
+        async function loadTrainings() {
+            try {
+                // Google Sheets published to web as CSV or JSON
+                // Replace this URL with your published Google Sheet
+                // const sheetId = 'YOUR_SHEET_ID_HERE';
+                // const sheetName = 'Sheet1';
+                // const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${sheetName}`;
+                
+                // For development/demo purposes, use sample data
+                const trainings = [
+                    {
+                        title: "Finding Data: Sources to harness for evidence backed reporting",
+                        description: "Panel Discussion",
+                        date: "Dec 2024",
+                        location: "Pune",
+                        link: "https://www.sjai.in/program-details-sjai-conference-2024"
+                    },
+                    {
+                        title: "CGIAR workshop on pitching stories",
+                        description: "Panel Discussion",
+                        date: "Nov 2024",
+                        location: "Virtual",
+                        link: "#"
+                    },
+                    {
+                        title: "Environmental Data Journalism Academy",
+                        description: "Data Journalism Trainer",
+                        date: "Mar - Sep 2024",
+                        location: "Bengaluru",
+                        link: "https://site.thibi.co/ejn-training/home"
+                    },
+                    {
+                        title: "Crafting stories about gender-responsive agricultural solutions",
+                        description: "Panel Discussion",
+                        date: "Aug 2023",
+                        location: "Virtual",
+                        link: "https://gender.cgiar.org/news/crafting-stories-about-gender-responsive-agricultural-solutions-why-and-how"
+                    },
+                    {
+                        title: "Using data journalism to promote gender equality",
+                        description: "Talk",
+                        date: "May 2023",
+                        location: "Virtual/India & Kenya",
+                        link: "https://equalmeasures30.org/blogs/using-data-journalism-to-promote-gender-equality-with-surbhi-bhatia/"
+                    },
+                    {
+                        title: "Mapping India’s law-tech landscape",
+                        description: "Talk",
+                        date: "Dec 2022",
+                        location: "Virtual",
+                        link: "https://daksh-lawtech-iitd.org/event/authors-roundtable-i/"
+                    },
+                    {
+                        title: "Storytelling with Data",
+                        description: "Talk",
+                        date: "April 2020",
+                        location: "Virtual/Bengaluru",
+                        link: "https://citapp.iiitb.ac.in/talks___talk_series/talk-by-surbhi-bhatia-on-storytelling-with-data/"
+                    },
+                    {
+                        title: "Introductory and Intermediate R programming",
+                        description: "Training",
+                        date: "Jun - Sep 2021",
+                        location: "Mumbai",
+                        link: "#"
+                    }
+                ];
+                
+                // In production, you would fetch from Google Sheets:
+                // const response = await fetch(url);
+                // const text = await response.text();
+                // const data = JSON.parse(text.substring(47).slice(0, -2));
+                // const trainings = data.table.rows.map(row => {
+                //    return {
+                //        title: row.c[0]?.v || '',
+                //        description: row.c[1]?.v || '',
+                //        date: row.c[2]?.v || '',
+                //        location: row.c[3]?.v || '',
+                //        link: row.c[4]?.v || '#'
+                //    };
+                // });
+
+                 displayTrainings(trainings);
+            } catch (error) {
+                console.error('Error loading trainings:', error);
+                document.getElementById('trainings-container').innerHTML = `
+                    <div class="error">
+                        <p>Sorry, we couldn't load the training information. Please try again later.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Function to display trainings
+        function displayTrainings(trainings) {
+            const container = document.getElementById('trainings-container');
+            
+            if (trainings.length === 0) {
+                container.innerHTML = `<p>No training sessions available at the moment. Check back soon!</p>`;
+                return;
+            }
+            
+            container.innerHTML = trainings.map(training => `
+                <a href="${training.link}" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="training-box">
+                        <div class="training-info">
+                            <h3>${training.title}</h3>
+                            <p>${training.description}</p>
+                        </div>
+                        <div class="training-meta">
+                            <div class="training-date">${training.date}</div>
+                            <div class="training-location">${training.location}</div>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // Load trainings when the page loads
+        window.addEventListener('DOMContentLoaded', loadTrainings);
+    </script>
+</body>
+</html>

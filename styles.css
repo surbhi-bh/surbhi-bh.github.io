@@ -1,1 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ... (keep all previous styles before bio-section) ... */
+
+
+.bio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.bio-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.bio-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.bio-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.bio-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.bio-text p {
+    margin: 0 0 1.5rem 0;
+}
+
+.bio-text a {
+    color: #333;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .bio-content {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-title {
+        font-size: 3rem;
+    }
+
+    .bio-text {
+        font-size: 1.25rem;
+    }
+}
+
+/* .bio-section {
+    text-align: center;
+    margin: 120px auto; 
+    padding: 40px 20px;  
+    width: 100%;        
+    max-width: 1200px;  
+    min-height: 40vh;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; 
+} */
+
+.bio-section p:first-line {
+    font-weight: bold; /* Makes "Hello, I am Surbhi" bolder */
+    font-size: 32px; /* Makes the first line even bigger */
+}
+
+.bio-section p {
+    font-size: 2.5rem;      /* Much larger font size */
+    line-height: 1.4;      /* Adjusted line height */
+    color: #333;
+    margin: 0;
+    font-weight: 300;     /* Lighter weight for base text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bio-section {
+        margin: 80px auto;
+    }
+
+    .bio-section p {
+        font-size: 2rem;
+    }
+
+    #animated-word {
+        font-size: 2.2rem;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bio-section {
+        margin: 60px auto;
+    }
+
+    .bio-section p {
+        font-size: 1.8rem;
+    }
+
+    #animated-word {
+        font-size: 2rem;
+        min-width: 120px;
+    }
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.section-content {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.section-content p {
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-content {
+        font-size: 1.1rem;
+    }
+}
+
+/* ... (keep all styles after bio-section the same) ... */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #F3F1ED;
+    font-family: 'Poppins', sans-serif;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#logo img {
+    height: 40px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #EAAAAC;
+}
+
+.bio-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    width: 70%;
+}
+
+.bio-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+#animated-word {
+    color: #EAAAAC;
+    font-weight: 600;
+}
+
+.separator {
+    border: 0;
+    height: 3px;
+    background-color: #EAAAAC;
+    margin: 40px auto;
+    width: 90%;
+}
+
+#filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    background-color: #EAAAAC;
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: #EAAAAC;
+    color: white;
+}
+
+#articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.article-card {
+    background: white;
+    /* border-radius: 0px; */
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.article-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 20px;
+}
+
+.article-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.article-publisher {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tag {
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #666;
+}
+
+@media (max-width: 900px) {
+    #header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #topNav {
+        margin-top: 20px;
+    }
+
+    .main-nav {
+        justify-content: center;
+    }
+
+    #articles-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 20px;
+    }
+}
+
+
+/* Styles for the Polaroid-like Cards */
+#articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.article-card {
+    background: white;
+    /* padding: 10px; */
+    text-align: center;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 10px solid white;
+    overflow: hidden;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+.article-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.article-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0px;
+}
+
+.article-publisher {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.article-tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tag {
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #666;
+}
+
+.finalist-tag {
+    background: #666;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Polaroid Grid */
+#articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Polaroid Card */
+.article-card {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;  /* Thin black outline */
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+/* Image inside Polaroid */
+.article-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: -2px; /* Reducing space between image & Polaroid edges */
+    margin-left: -2px;
+    margin-right: -2px;
+}
+
+/* Polaroid Content */
+.article-content {
+    padding: 15px;
+    text-align: center;
+    background: white;
+    width: 100%;
+}
+
+.article-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0px;
+}
+
+.article-publisher {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0.5) translateY(0); }
+    30% { opacity: 1; transform: scale(1) translateY(-10px); }
+    100% { opacity: 0; transform: scale(1.5) translateY(-30px); }
+}
+
+.sparkle {
+    position: absolute;
+    width: 6px; /* Slightly bigger sparkles */
+    height: 6px;
+    background: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 8px gold, 0 0 15px yellow;
+    animation: sparkle 2s ease-out forwards; /* Longer duration */
+}
+
+
+#contact-section {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#contact-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #EAAAAC;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.center-image {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.center-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.center-image {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.center-image img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.training-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.training-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.training-section li {
+    margin-bottom: 1rem;
+}
+
+.training-section strong {
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .center-image img {
+        max-width: 100%;
+    }
+}
 

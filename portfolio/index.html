@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Surbhi Bhatia</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <a href="/"><img src="../assets/name.png" alt="Surbhi Bhatia"></a>
+        </div>
+
+        <nav id="topNav">
+            <ul class="main-nav">
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/trainings">Talks and Trainings</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="filter-container">
+        <button class="filter-btn active" onclick="filterSelection('all')">All</button>
+        <button class="filter-btn" onclick="filterSelection('Gender')">Gender</button>
+        <button class="filter-btn" onclick="filterSelection('Entertainment')">Entertainment</button>
+        <button class="filter-btn" onclick="filterSelection('Economy')">Economy</button>
+        <button class="filter-btn" onclick="filterSelection('Policy')">Policy</button>
+        <button class="filter-btn" onclick="filterSelection('Award Winning')">Award Winning</button>
+    </div>
+
+    <div id="articles-grid"></div>
+
+
+    <div id="footer-container"></div>
+    <script src="../footer.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<head>
+    <!-- Load Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<style>
+    /* Footer Styles */
+    .site-footer {
+      background-color: #F3F1ED;
+      padding: 2rem 0;
+      margin-top: 3rem;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    /* Footer Navigation */
+    .footer-nav {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-menu a {
+      color: #495057;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .footer-menu a:hover {
+      color: #212529;
+      text-decoration: underline;
+    }
+
+    /* Social Media Icons */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-icons a {
+      color: #fff; /* Icon color */
+      transition: all 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; /* Icon container size */
+      height: 40px; /* Icon container size */
+      border-radius: 50%;
+      background-color: #EAAAAC; /* Base background color for icons */
+      font-size: 1.5rem; /* Icon size */
+      text-decoration: none; /* Prevent underline */
+    }
+
+    .social-icons a:hover {
+        transform: translateY(-3px); /* Pop up effect */
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+        text-decoration: none; /* Ensure no underline on hover */
+    }
+
+    .copyright {
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .site-footer {
+            padding: 1.5rem 0;
+        }
+        
+        .footer-menu {
+            gap: 1rem;
+            flex-direction: column;
+        }
+        
+        .social-icons {
+            gap: 1rem;
+        }
+    }
+</style>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-nav">
+            <ul class="footer-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/portfolio/">Portfolio</a></li>
+                <li><a href="/trainings/">Trainings</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+        
+        <p style="text-align:center; font-size:1rem; color:#495057; font-weight:bold;">surbhibhatia1906@gmail.com</p>
+        
+        <div class="social-icons">
+            <a href="https://twitter.com/surbhaai" aria-label="Twitter" target="_blank" class="fa-brands fa-twitter"></a>
+            <a href="https://www.linkedin.com/in/surbhi-bhatia-17763b88/" aria-label="LinkedIn" target="_blank" class="fa-brands fa-linkedin"></a>
+            <a href="https://github.com/surbhi-bh" aria-label="GitHub" target="_blank" class="fa-brands fa-github"></a>
+            <!-- Bluesky Icon -->
+            <a href="https://bsky.app/profile/surbhaai.bsky.social" aria-label="Bluesky" target="_blank" class="fa-brands fa-bluesky"></a>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; <span id="currentYear"></span> Surbhi. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
