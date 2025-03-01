@@ -1,0 +1,2354 @@
+{
+    "steps": [
+      {
+        "date": "February 01, 2025",
+        "steps": 114,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 1
+      },
+      {
+        "date": "August 29, 2024",
+        "steps": 136,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 2
+      },
+      {
+        "date": "August 16, 2024",
+        "steps": 139,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 3
+      },
+      {
+        "date": "September 22, 2024",
+        "steps": 146,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 4
+      },
+      {
+        "date": "November 30, 2024",
+        "steps": 224,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 5
+      },
+      {
+        "date": "September 02, 2024",
+        "steps": 243,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 6
+      },
+      {
+        "date": "August 14, 2024",
+        "steps": 248,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 7
+      },
+      {
+        "date": "September 16, 2024",
+        "steps": 256,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 8
+      },
+      {
+        "date": "September 10, 2024",
+        "steps": 296,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 9
+      },
+      {
+        "date": "September 05, 2024",
+        "steps": 351,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 10
+      },
+      {
+        "date": "October 05, 2024",
+        "steps": 355,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 11
+      },
+      {
+        "date": "September 15, 2024",
+        "steps": 374,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 12
+      },
+      {
+        "date": "August 28, 2024",
+        "steps": 394,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 13
+      },
+      {
+        "date": "September 26, 2024",
+        "steps": 397,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 14
+      },
+      {
+        "date": "September 09, 2024",
+        "steps": 401,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 15
+      },
+      {
+        "date": "August 30, 2024",
+        "steps": 472,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 16
+      },
+      {
+        "date": "January 01, 2025",
+        "steps": 475,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 17
+      },
+      {
+        "date": "September 19, 2024",
+        "steps": 492,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 18
+      },
+      {
+        "date": "October 19, 2024",
+        "steps": 500,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 19
+      },
+      {
+        "date": "October 20, 2024",
+        "steps": 502,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 20
+      },
+      {
+        "date": "February 15, 2025",
+        "steps": 521,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 21
+      },
+      {
+        "date": "September 12, 2024",
+        "steps": 549,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 22
+      },
+      {
+        "date": "September 03, 2024",
+        "steps": 560,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 23
+      },
+      {
+        "date": "September 14, 2024",
+        "steps": 562,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 24
+      },
+      {
+        "date": "September 17, 2024",
+        "steps": 568,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 25
+      },
+      {
+        "date": "January 26, 2025",
+        "steps": 578,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 26
+      },
+      {
+        "date": "September 23, 2024",
+        "steps": 631,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 27
+      },
+      {
+        "date": "January 05, 2025",
+        "steps": 660,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 28
+      },
+      {
+        "date": "September 21, 2024",
+        "steps": 676,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 29
+      },
+      {
+        "date": "October 13, 2024",
+        "steps": 746,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 30
+      },
+      {
+        "date": "November 06, 2024",
+        "steps": 830,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 31
+      },
+      {
+        "date": "November 05, 2024",
+        "steps": 843,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 32
+      },
+      {
+        "date": "December 17, 2024",
+        "steps": 924,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 33
+      },
+      {
+        "date": "November 21, 2024",
+        "steps": 961,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 34
+      },
+      {
+        "date": "September 20, 2024",
+        "steps": 1008,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 35
+      },
+      {
+        "date": "November 28, 2024",
+        "steps": 1090,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 36
+      },
+      {
+        "date": "September 24, 2024",
+        "steps": 1103,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 37
+      },
+      {
+        "date": "February 05, 2025",
+        "steps": 1138,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 38
+      },
+      {
+        "date": "January 30, 2025",
+        "steps": 1179,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 39
+      },
+      {
+        "date": "September 18, 2024",
+        "steps": 1269,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 40
+      },
+      {
+        "date": "October 26, 2024",
+        "steps": 1269,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 41
+      },
+      {
+        "date": "February 10, 2025",
+        "steps": 1299,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 42
+      },
+      {
+        "date": "November 22, 2024",
+        "steps": 1330,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 43
+      },
+      {
+        "date": "January 13, 2025",
+        "steps": 1367,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 44
+      },
+      {
+        "date": "December 31, 2024",
+        "steps": 1524,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 45
+      },
+      {
+        "date": "January 23, 2025",
+        "steps": 1539,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 46
+      },
+      {
+        "date": "January 10, 2025",
+        "steps": 1558,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 47
+      },
+      {
+        "date": "February 13, 2025",
+        "steps": 1573,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 48
+      },
+      {
+        "date": "November 13, 2024",
+        "steps": 1575,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 49
+      },
+      {
+        "date": "December 19, 2024",
+        "steps": 1602,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 50
+      },
+      {
+        "date": "February 14, 2025",
+        "steps": 1604,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 51
+      },
+      {
+        "date": "November 25, 2024",
+        "steps": 1628,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 52
+      },
+      {
+        "date": "February 04, 2025",
+        "steps": 1632,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 53
+      },
+      {
+        "date": "December 30, 2024",
+        "steps": 1634,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 54
+      },
+      {
+        "date": "August 22, 2024",
+        "steps": 1638,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 55
+      },
+      {
+        "date": "November 18, 2024",
+        "steps": 1672,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 56
+      },
+      {
+        "date": "December 10, 2024",
+        "steps": 1693,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 57
+      },
+      {
+        "date": "November 23, 2024",
+        "steps": 1715,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 58
+      },
+      {
+        "date": "January 09, 2025",
+        "steps": 1783,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 59
+      },
+      {
+        "date": "September 07, 2024",
+        "steps": 1800,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 60
+      },
+      {
+        "date": "October 24, 2024",
+        "steps": 1867,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 61
+      },
+      {
+        "date": "November 12, 2024",
+        "steps": 1867,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 62
+      },
+      {
+        "date": "December 09, 2024",
+        "steps": 1885,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 63
+      },
+      {
+        "date": "November 19, 2024",
+        "steps": 1930,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 64
+      },
+      {
+        "date": "September 11, 2024",
+        "steps": 1962,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 65
+      },
+      {
+        "date": "November 26, 2024",
+        "steps": 1964,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 66
+      },
+      {
+        "date": "January 03, 2025",
+        "steps": 1979,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 67
+      },
+      {
+        "date": "February 12, 2025",
+        "steps": 2045,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 68
+      },
+      {
+        "date": "December 23, 2024",
+        "steps": 2049,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 69
+      },
+      {
+        "date": "September 04, 2024",
+        "steps": 2081,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 70
+      },
+      {
+        "date": "September 30, 2024",
+        "steps": 2127,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 71
+      },
+      {
+        "date": "October 28, 2024",
+        "steps": 2133,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 72
+      },
+      {
+        "date": "October 03, 2024",
+        "steps": 2135,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 73
+      },
+      {
+        "date": "December 11, 2024",
+        "steps": 2154,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 74
+      },
+      {
+        "date": "November 27, 2024",
+        "steps": 2188,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 75
+      },
+      {
+        "date": "September 28, 2024",
+        "steps": 2189,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 76
+      },
+      {
+        "date": "January 31, 2025",
+        "steps": 2213,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 77
+      },
+      {
+        "date": "February 02, 2025",
+        "steps": 2225,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 78
+      },
+      {
+        "date": "October 22, 2024",
+        "steps": 2272,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 79
+      },
+      {
+        "date": "January 06, 2025",
+        "steps": 2275,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 80
+      },
+      {
+        "date": "September 27, 2024",
+        "steps": 2290,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 81
+      },
+      {
+        "date": "December 12, 2024",
+        "steps": 2306,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 82
+      },
+      {
+        "date": "August 15, 2024",
+        "steps": 2309,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 83
+      },
+      {
+        "date": "December 16, 2024",
+        "steps": 2316,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 84
+      },
+      {
+        "date": "February 16, 2025",
+        "steps": 2323,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 85
+      },
+      {
+        "date": "October 27, 2024",
+        "steps": 2357,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 86
+      },
+      {
+        "date": "January 19, 2025",
+        "steps": 2362,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 87
+      },
+      {
+        "date": "October 16, 2024",
+        "steps": 2421,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 88
+      },
+      {
+        "date": "January 27, 2025",
+        "steps": 2456,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 89
+      },
+      {
+        "date": "January 22, 2025",
+        "steps": 2512,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 90
+      },
+      {
+        "date": "September 25, 2024",
+        "steps": 2619,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 91
+      },
+      {
+        "date": "October 17, 2024",
+        "steps": 2695,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 92
+      },
+      {
+        "date": "January 11, 2025",
+        "steps": 2702,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 93
+      },
+      {
+        "date": "August 13, 2024",
+        "steps": 2817,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 94
+      },
+      {
+        "date": "January 28, 2025",
+        "steps": 2818,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 95
+      },
+      {
+        "date": "December 18, 2024",
+        "steps": 2840,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 96
+      },
+      {
+        "date": "December 15, 2024",
+        "steps": 2850,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 97
+      },
+      {
+        "date": "January 16, 2025",
+        "steps": 2857,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 98
+      },
+      {
+        "date": "October 08, 2024",
+        "steps": 2866,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 99
+      },
+      {
+        "date": "January 14, 2025",
+        "steps": 2889,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 100
+      },
+      {
+        "date": "September 06, 2024",
+        "steps": 2922,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 101
+      },
+      {
+        "date": "November 11, 2024",
+        "steps": 2962,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 102
+      },
+      {
+        "date": "October 15, 2024",
+        "steps": 2993,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 103
+      },
+      {
+        "date": "November 24, 2024",
+        "steps": 3018,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 104
+      },
+      {
+        "date": "February 03, 2025",
+        "steps": 3095,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 105
+      },
+      {
+        "date": "August 23, 2024",
+        "steps": 3128,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 106
+      },
+      {
+        "date": "August 21, 2024",
+        "steps": 3135,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 107
+      },
+      {
+        "date": "December 02, 2024",
+        "steps": 3154,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 108
+      },
+      {
+        "date": "February 11, 2025",
+        "steps": 3191,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 109
+      },
+      {
+        "date": "December 01, 2024",
+        "steps": 3211,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 110
+      },
+      {
+        "date": "January 17, 2025",
+        "steps": 3220,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 111
+      },
+      {
+        "date": "September 29, 2024",
+        "steps": 3319,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 112
+      },
+      {
+        "date": "October 29, 2024",
+        "steps": 3369,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 113
+      },
+      {
+        "date": "October 11, 2024",
+        "steps": 3385,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 114
+      },
+      {
+        "date": "September 08, 2024",
+        "steps": 3395,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 115
+      },
+      {
+        "date": "January 08, 2025",
+        "steps": 3415,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 116
+      },
+      {
+        "date": "December 03, 2024",
+        "steps": 3423,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 117
+      },
+      {
+        "date": "February 07, 2025",
+        "steps": 3433,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 118
+      },
+      {
+        "date": "January 15, 2025",
+        "steps": 3485,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 119
+      },
+      {
+        "date": "November 29, 2024",
+        "steps": 3504,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 120
+      },
+      {
+        "date": "January 18, 2025",
+        "steps": 3511,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 121
+      },
+      {
+        "date": "November 20, 2024",
+        "steps": 3526,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 122
+      },
+      {
+        "date": "January 02, 2025",
+        "steps": 3537,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 123
+      },
+      {
+        "date": "December 13, 2024",
+        "steps": 3574,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 124
+      },
+      {
+        "date": "June 24, 2024",
+        "steps": 3603,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 125
+      },
+      {
+        "date": "July 20, 2024",
+        "steps": 3621,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 126
+      },
+      {
+        "date": "October 04, 2024",
+        "steps": 3678,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 127
+      },
+      {
+        "date": "November 14, 2024",
+        "steps": 3704,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 128
+      },
+      {
+        "date": "September 01, 2024",
+        "steps": 3728,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 129
+      },
+      {
+        "date": "October 14, 2024",
+        "steps": 3738,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 130
+      },
+      {
+        "date": "December 20, 2024",
+        "steps": 3741,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 131
+      },
+      {
+        "date": "November 10, 2024",
+        "steps": 3843,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 132
+      },
+      {
+        "date": "October 23, 2024",
+        "steps": 3875,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 133
+      },
+      {
+        "date": "August 07, 2024",
+        "steps": 3886,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 134
+      },
+      {
+        "date": "October 21, 2024",
+        "steps": 3903,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 135
+      },
+      {
+        "date": "June 25, 2024",
+        "steps": 3987,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 136
+      },
+      {
+        "date": "July 07, 2024",
+        "steps": 3995,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 137
+      },
+      {
+        "date": "October 18, 2024",
+        "steps": 4034,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 138
+      },
+      {
+        "date": "October 25, 2024",
+        "steps": 4078,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 139
+      },
+      {
+        "date": "January 07, 2025",
+        "steps": 4105,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 140
+      },
+      {
+        "date": "December 22, 2024",
+        "steps": 4181,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 141
+      },
+      {
+        "date": "February 06, 2025",
+        "steps": 4193,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 142
+      },
+      {
+        "date": "July 08, 2024",
+        "steps": 4215,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 143
+      },
+      {
+        "date": "August 18, 2024",
+        "steps": 4367,
+        "day_type": "Weekend",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#FFC0CB",
+        "printloc": 144
+      },
+      {
+        "date": "July 06, 2024",
+        "steps": 4405,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 145
+      },
+      {
+        "date": "January 21, 2025",
+        "steps": 4674,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 146
+      },
+      {
+        "date": "October 07, 2024",
+        "steps": 4676,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 147
+      },
+      {
+        "date": "July 03, 2024",
+        "steps": 4683,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 148
+      },
+      {
+        "date": "August 17, 2024",
+        "steps": 4787,
+        "day_type": "Weekend",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#FFC0CB",
+        "printloc": 149
+      },
+      {
+        "date": "June 28, 2024",
+        "steps": 4798,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 150
+      },
+      {
+        "date": "November 04, 2024",
+        "steps": 4817,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 151
+      },
+      {
+        "date": "December 21, 2024",
+        "steps": 4823,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 152
+      },
+      {
+        "date": "June 08, 2024",
+        "steps": 4842,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 153
+      },
+      {
+        "date": "August 20, 2024",
+        "steps": 4883,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 154
+      },
+      {
+        "date": "January 20, 2025",
+        "steps": 5068,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 155
+      },
+      {
+        "date": "August 31, 2024",
+        "steps": 5186,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 156
+      },
+      {
+        "date": "January 04, 2025",
+        "steps": 5195,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 157
+      },
+      {
+        "date": "December 05, 2024",
+        "steps": 5384,
+        "day_type": "Weekday",
+        "location": "Pune",
+        "colours_location": "#008080",
+        "colours_day": "#0000FF",
+        "printloc": 158
+      },
+      {
+        "date": "December 08, 2024",
+        "steps": 5542,
+        "day_type": "Weekend",
+        "location": "Bombay",
+        "colours_location": "#FFA500",
+        "colours_day": "#FFC0CB",
+        "printloc": 159
+      },
+      {
+        "date": "January 25, 2025",
+        "steps": 5569,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 160
+      },
+      {
+        "date": "July 02, 2024",
+        "steps": 5672,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 161
+      },
+      {
+        "date": "September 13, 2024",
+        "steps": 5678,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 162
+      },
+      {
+        "date": "June 13, 2024",
+        "steps": 5704,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 163
+      },
+      {
+        "date": "December 28, 2024",
+        "steps": 5714,
+        "day_type": "Weekend",
+        "location": "Bombay",
+        "colours_location": "#FFA500",
+        "colours_day": "#FFC0CB",
+        "printloc": 164
+      },
+      {
+        "date": "November 07, 2024",
+        "steps": 5813,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 165
+      },
+      {
+        "date": "October 09, 2024",
+        "steps": 5887,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 166
+      },
+      {
+        "date": "June 12, 2024",
+        "steps": 5964,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 167
+      },
+      {
+        "date": "December 14, 2024",
+        "steps": 5986,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 168
+      },
+      {
+        "date": "August 25, 2024",
+        "steps": 6117,
+        "day_type": "Weekend",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#FFC0CB",
+        "printloc": 169
+      },
+      {
+        "date": "August 27, 2024",
+        "steps": 6144,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 170
+      },
+      {
+        "date": "October 06, 2024",
+        "steps": 6187,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 171
+      },
+      {
+        "date": "July 21, 2024",
+        "steps": 6204,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 172
+      },
+      {
+        "date": "November 08, 2024",
+        "steps": 6270,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 173
+      },
+      {
+        "date": "December 26, 2024",
+        "steps": 6480,
+        "day_type": "Weekday",
+        "location": "Bombay",
+        "colours_location": "#FFA500",
+        "colours_day": "#0000FF",
+        "printloc": 174
+      },
+      {
+        "date": "October 12, 2024",
+        "steps": 6493,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 175
+      },
+      {
+        "date": "December 24, 2024",
+        "steps": 6493,
+        "day_type": "Weekday",
+        "location": "Bombay",
+        "colours_location": "#FFA500",
+        "colours_day": "#0000FF",
+        "printloc": 176
+      },
+      {
+        "date": "February 08, 2025",
+        "steps": 6571,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 177
+      },
+      {
+        "date": "July 04, 2024",
+        "steps": 6601,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 178
+      },
+      {
+        "date": "July 09, 2024",
+        "steps": 6654,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 179
+      },
+      {
+        "date": "October 30, 2024",
+        "steps": 6695,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 180
+      },
+      {
+        "date": "June 02, 2024",
+        "steps": 6699,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 181
+      },
+      {
+        "date": "October 01, 2024",
+        "steps": 6721,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 182
+      },
+      {
+        "date": "December 29, 2024",
+        "steps": 6765,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 183
+      },
+      {
+        "date": "December 27, 2024",
+        "steps": 6805,
+        "day_type": "Weekday",
+        "location": "Bombay",
+        "colours_location": "#FFA500",
+        "colours_day": "#0000FF",
+        "printloc": 184
+      },
+      {
+        "date": "August 06, 2024",
+        "steps": 6818,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 185
+      },
+      {
+        "date": "July 22, 2024",
+        "steps": 6820,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 186
+      },
+      {
+        "date": "August 24, 2024",
+        "steps": 6825,
+        "day_type": "Weekend",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#FFC0CB",
+        "printloc": 187
+      },
+      {
+        "date": "July 19, 2024",
+        "steps": 6928,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 188
+      },
+      {
+        "date": "June 18, 2024",
+        "steps": 6971,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 189
+      },
+      {
+        "date": "October 02, 2024",
+        "steps": 7076,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 190
+      },
+      {
+        "date": "June 11, 2024",
+        "steps": 7133,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 191
+      },
+      {
+        "date": "June 22, 2024",
+        "steps": 7217,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 192
+      },
+      {
+        "date": "June 23, 2024",
+        "steps": 7220,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 193
+      },
+      {
+        "date": "July 18, 2024",
+        "steps": 7386,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 194
+      },
+      {
+        "date": "December 06, 2024",
+        "steps": 7465,
+        "day_type": "Weekday",
+        "location": "Bombay",
+        "colours_location": "#FFA500",
+        "colours_day": "#0000FF",
+        "printloc": 195
+      },
+      {
+        "date": "June 15, 2024",
+        "steps": 7466,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 196
+      },
+      {
+        "date": "July 10, 2024",
+        "steps": 7661,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 197
+      },
+      {
+        "date": "November 17, 2024",
+        "steps": 7866,
+        "day_type": "Weekend",
+        "location": "Dharamshala",
+        "colours_location": "#A52A2A",
+        "colours_day": "#FFC0CB",
+        "printloc": 198
+      },
+      {
+        "date": "August 26, 2024",
+        "steps": 7867,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 199
+      },
+      {
+        "date": "June 21, 2024",
+        "steps": 7904,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 200
+      },
+      {
+        "date": "July 17, 2024",
+        "steps": 7907,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 201
+      },
+      {
+        "date": "August 01, 2024",
+        "steps": 7930,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 202
+      },
+      {
+        "date": "July 30, 2024",
+        "steps": 7974,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 203
+      },
+      {
+        "date": "June 05, 2024",
+        "steps": 8467,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 204
+      },
+      {
+        "date": "January 12, 2025",
+        "steps": 8501,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 205
+      },
+      {
+        "date": "January 24, 2025",
+        "steps": 8593,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 206
+      },
+      {
+        "date": "November 09, 2024",
+        "steps": 8779,
+        "day_type": "Weekend",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#FFC0CB",
+        "printloc": 207
+      },
+      {
+        "date": "June 01, 2024",
+        "steps": 8951,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 208
+      },
+      {
+        "date": "October 10, 2024",
+        "steps": 9017,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 209
+      },
+      {
+        "date": "June 26, 2024",
+        "steps": 9019,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 210
+      },
+      {
+        "date": "February 09, 2025",
+        "steps": 9228,
+        "day_type": "Weekend",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#FFC0CB",
+        "printloc": 211
+      },
+      {
+        "date": "August 19, 2024",
+        "steps": 9295,
+        "day_type": "Weekday",
+        "location": "Bangalore",
+        "colours_location": "#800080",
+        "colours_day": "#0000FF",
+        "printloc": 212
+      },
+      {
+        "date": "January 29, 2025",
+        "steps": 9314,
+        "day_type": "Weekday",
+        "location": "Delhi",
+        "colours_location": "#808080",
+        "colours_day": "#0000FF",
+        "printloc": 213
+      },
+      {
+        "date": "July 11, 2024",
+        "steps": 9365,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 214
+      },
+      {
+        "date": "August 02, 2024",
+        "steps": 9493,
+        "day_type": "Weekday",
+        "location": "Chicago",
+        "colours_location": "#00FF00",
+        "colours_day": "#0000FF",
+        "printloc": 215
+      },
+      {
+        "date": "June 06, 2024",
+        "steps": 9537,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 216
+      },
+      {
+        "date": "June 14, 2024",
+        "steps": 10023,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 217
+      },
+      {
+        "date": "December 04, 2024",
+        "steps": 10507,
+        "day_type": "Weekday",
+        "location": "Pune",
+        "colours_location": "#008080",
+        "colours_day": "#0000FF",
+        "printloc": 218
+      },
+      {
+        "date": "July 01, 2024",
+        "steps": 11098,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 219
+      },
+      {
+        "date": "November 02, 2024",
+        "steps": 11353,
+        "day_type": "Weekend",
+        "location": "Bangkok",
+        "colours_location": "#FFC0CB",
+        "colours_day": "#FFC0CB",
+        "printloc": 220
+      },
+      {
+        "date": "June 04, 2024",
+        "steps": 11366,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 221
+      },
+      {
+        "date": "June 29, 2024",
+        "steps": 11602,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 222
+      },
+      {
+        "date": "June 17, 2024",
+        "steps": 12057,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 223
+      },
+      {
+        "date": "November 03, 2024",
+        "steps": 12213,
+        "day_type": "Weekend",
+        "location": "Bangkok",
+        "colours_location": "#FFC0CB",
+        "colours_day": "#FFC0CB",
+        "printloc": 224
+      },
+      {
+        "date": "July 23, 2024",
+        "steps": 12248,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 225
+      },
+      {
+        "date": "July 16, 2024",
+        "steps": 12529,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 226
+      },
+      {
+        "date": "June 07, 2024",
+        "steps": 12672,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 227
+      },
+      {
+        "date": "June 27, 2024",
+        "steps": 12686,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 228
+      },
+      {
+        "date": "June 10, 2024",
+        "steps": 12692,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 229
+      },
+      {
+        "date": "July 25, 2024",
+        "steps": 13131,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 230
+      },
+      {
+        "date": "December 07, 2024",
+        "steps": 13234,
+        "day_type": "Weekend",
+        "location": "Bombay",
+        "colours_location": "#FFA500",
+        "colours_day": "#FFC0CB",
+        "printloc": 231
+      },
+      {
+        "date": "August 03, 2024",
+        "steps": 13330,
+        "day_type": "Weekend",
+        "location": "Chicago",
+        "colours_location": "#00FF00",
+        "colours_day": "#FFC0CB",
+        "printloc": 232
+      },
+      {
+        "date": "July 05, 2024",
+        "steps": 13515,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 233
+      },
+      {
+        "date": "July 31, 2024",
+        "steps": 13630,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 234
+      },
+      {
+        "date": "July 12, 2024",
+        "steps": 14234,
+        "day_type": "Weekday",
+        "location": "Washington DC",
+        "colours_location": "#FFFF00",
+        "colours_day": "#0000FF",
+        "printloc": 235
+      },
+      {
+        "date": "August 10, 2024",
+        "steps": 14424,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 236
+      },
+      {
+        "date": "July 29, 2024",
+        "steps": 14473,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 237
+      },
+      {
+        "date": "July 24, 2024",
+        "steps": 14870,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 238
+      },
+      {
+        "date": "June 30, 2024",
+        "steps": 15028,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 239
+      },
+      {
+        "date": "November 15, 2024",
+        "steps": 15221,
+        "day_type": "Weekday",
+        "location": "Dharamshala",
+        "colours_location": "#A52A2A",
+        "colours_day": "#0000FF",
+        "printloc": 240
+      },
+      {
+        "date": "June 09, 2024",
+        "steps": 15309,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 241
+      },
+      {
+        "date": "July 27, 2024",
+        "steps": 15511,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 242
+      },
+      {
+        "date": "August 04, 2024",
+        "steps": 15653,
+        "day_type": "Weekend",
+        "location": "Chicago",
+        "colours_location": "#00FF00",
+        "colours_day": "#FFC0CB",
+        "printloc": 243
+      },
+      {
+        "date": "December 25, 2024",
+        "steps": 15975,
+        "day_type": "Weekday",
+        "location": "Bombay",
+        "colours_location": "#FFA500",
+        "colours_day": "#0000FF",
+        "printloc": 244
+      },
+      {
+        "date": "June 16, 2024",
+        "steps": 16685,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 245
+      },
+      {
+        "date": "November 16, 2024",
+        "steps": 17151,
+        "day_type": "Weekend",
+        "location": "Dharamshala",
+        "colours_location": "#A52A2A",
+        "colours_day": "#FFC0CB",
+        "printloc": 246
+      },
+      {
+        "date": "August 09, 2024",
+        "steps": 17185,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 247
+      },
+      {
+        "date": "July 28, 2024",
+        "steps": 17243,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 248
+      },
+      {
+        "date": "June 20, 2024",
+        "steps": 17358,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 249
+      },
+      {
+        "date": "August 11, 2024",
+        "steps": 17702,
+        "day_type": "Weekend",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FFC0CB",
+        "printloc": 250
+      },
+      {
+        "date": "November 01, 2024",
+        "steps": 18340,
+        "day_type": "Weekday",
+        "location": "Bangkok",
+        "colours_location": "#FFC0CB",
+        "colours_day": "#0000FF",
+        "printloc": 251
+      },
+      {
+        "date": "July 14, 2024",
+        "steps": 18364,
+        "day_type": "Weekend",
+        "location": "Philadelphia",
+        "colours_location": "#0000FF",
+        "colours_day": "#FFC0CB",
+        "printloc": 252
+      },
+      {
+        "date": "October 31, 2024",
+        "steps": 18894,
+        "day_type": "Weekday",
+        "location": "Bangkok",
+        "colours_location": "#FFC0CB",
+        "colours_day": "#0000FF",
+        "printloc": 253
+      },
+      {
+        "date": "June 03, 2024",
+        "steps": 18923,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 254
+      },
+      {
+        "date": "June 19, 2024",
+        "steps": 19989,
+        "day_type": "On my birthday!",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#FF0000",
+        "printloc": 255
+      },
+      {
+        "date": "August 12, 2024",
+        "steps": 21889,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 256
+      },
+      {
+        "date": "August 08, 2024",
+        "steps": 23378,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 257
+      },
+      {
+        "date": "July 26, 2024",
+        "steps": 25767,
+        "day_type": "Weekday",
+        "location": "New York",
+        "colours_location": "#FF0000",
+        "colours_day": "#0000FF",
+        "printloc": 258
+      },
+      {
+        "date": "July 13, 2024",
+        "steps": 27474,
+        "day_type": "Weekend",
+        "location": "Washington DC",
+        "colours_location": "#FFFF00",
+        "colours_day": "#FFC0CB",
+        "printloc": 259
+      },
+      {
+        "date": "July 15, 2024",
+        "steps": 28051,
+        "day_type": "Weekday",
+        "location": "Philadelphia",
+        "colours_location": "#0000FF",
+        "colours_day": "#0000FF",
+        "printloc": 260
+      },
+      {
+        "date": "August 05, 2024",
+        "steps": 28341,
+        "day_type": "Weekday",
+        "location": "Chicago",
+        "colours_location": "#00FF00",
+        "colours_day": "#0000FF",
+        "printloc": 261
+      }
+    ]
+  }
+  

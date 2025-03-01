@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Force-Directed Beeswarm Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #chart {
+            width: 100%;
+            max-width: 1200px;
+            height: 550px;
+            box-sizing: border-box;
+            overflow: visible;
+        }
+        svg {
+            overflow: visible;
+        }
+        .dot {
+            fill: #808080;
+            fill-opacity: 0.7;
+            stroke: #fff;
+            stroke-width: 0.5;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .dot:hover {
+            stroke: #666;
+            stroke-width: 2;
+            fill-opacity: 0.9;
+            filter: drop-shadow(0 0 3px rgba(0,0,0,0.3));
+        }
+        .star {
+            fill: #808080;
+            fill-opacity: 0.7;
+            stroke: #fff;
+            stroke-width: 0.5;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .star:hover {
+            stroke: #666;
+            stroke-width: 2;
+            fill-opacity: 0.9;
+            filter: drop-shadow(0 0 3px rgba(0,0,0,0.3));
+        }
+        .median-line {
+            stroke: #666;
+            stroke-dasharray: 4;
+            stroke-width: 1;
+        }
+        .controls {
+            position: absolute;
+            top: 10px;
+            right: 200px;
+            z-index: 100;
+        }
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+        }
+        .main-button {
+            padding: 8px 20px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+            min-width: 120px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .main-button:hover {
+            background: #EAAAAC;
+            border-color: #EAAAAC;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        .main-button.active {
+            background: #EAAAAC;
+            border-color: #666;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        .tooltip {
+            position: absolute;
+            background: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            pointer-events: none;
+            opacity: 0;
+            font-size: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: opacity 0.3s ease;
+        }
+        .legend-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+        }
+        .legend {
+            display: none;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+        .legend.show {
+            display: flex;
+            opacity: 1;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 10px;
+        }
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .axis-label {
+            font-size: 14px;
+            fill: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="chart"></div>
+        
+        <div class="controls">
+            <div class="button-group">
+                <button class="main-button">By Location</button>
+                <button class="main-button">By Day</button>
+            </div>
+        </div>
+        
+        <div class="legend-container">
+            <div class="legend" id="location-legend"></div>
+            <div class="legend" id="day-legend"></div>
+        </div>
+    </div>
+    <script>
+        // Star path function
+        function starPath(size) {
+            const points = 5;
+            const innerRadius = size * 0.4;
+            const outerRadius = size;
+            let path = "";
+            
+            for (let i = 0; i < points * 2; i++) {
+                const radius = i % 2 === 0 ? outerRadius : innerRadius;
+                const angle = (Math.PI / points) * i;
+                const x = radius * Math.sin(angle);
+                const y = -radius * Math.cos(angle);
+                path += (i === 0 ? "M" : "L") + `${x},${y}`;
+            }
+            path += "Z";
+            return path;
+        }
+
+        // Load and process the data
+        d3.json('steps.json').then(function(jsonData) {
+            const data = jsonData.steps;
+
+            // Dimensions
+            const width = 1060;
+            const height = 500;
+            const margin = { top: 20, right: 40, bottom: 60, left: 40 };
+
+            // Create SVG
+            const svg = d3.select("#chart")
+                .append("svg")
+                .attr("width", "100%")
+                .attr("height", "100%")
+                .attr("viewBox", `0 0 ${width} ${height}`)
+                .attr("preserveAspectRatio", "xMidYMid meet");
+
+            // Create tooltip
+            const tooltip = d3.select("body")
+                .append("div")
+                .attr("class", "tooltip");
+
+            // Create scale for x-axis
+            const xScale = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.steps)])
+                .range([margin.left, width - margin.right]);
+
+            // Calculate median
+            const median = d3.median(data, d => d.steps);
+
+            function updateVis(filteredData, colorBy = null) {
+                const simulation = d3.forceSimulation(filteredData)
+                    .force("x", d3.forceX(d => xScale(d.steps)).strength(1))
+                    .force("y", d3.forceY(height / 2))
+                    .force("collide", d3.forceCollide(8))
+                    .stop();
+
+                for (let i = 0; i < 300; i++) simulation.tick();
+
+                // Update dots with transition
+                const dots = svg.selectAll(".dot")
+                    .data(filteredData.filter(d => !d.date.includes("birthday")));
+
+                dots.transition()
+                    .duration(500)
+                    .style("fill", d => colorBy === 'location' ? d.colours_location : 
+                                     colorBy === 'day' ? d.colours_day : '#808080');
+
+                dots.enter()
+                    .append("circle")
+                    .attr("class", "dot")
+                    .attr("r", 8)
+                    .attr("cx", d => d.x)
+                    .attr("cy", d => d.y)
+                    .style("fill", d => colorBy === 'location' ? d.colours_location : 
+                                     colorBy === 'day' ? d.colours_day : '#808080')
+                    .on("mouseover", showTooltip)
+                    .on("mouseout", hideTooltip);
+
+                // Update stars with transition
+                const stars = svg.selectAll(".star")
+                    .data(filteredData.filter(d => d.date.includes("birthday")));
+
+                stars.transition()
+                    .duration(500)
+                    .style("fill", d => colorBy === 'location' ? d.colours_location : 
+                                     colorBy === 'day' ? d.colours_day : '#808080');
+
+                stars.enter()
+                    .append("path")
+                    .attr("class", "star")
+                    .attr("d", starPath(12))
+                    .attr("transform", d => `translate(${d.x},${d.y})`)
+                    .style("fill", d => colorBy === 'location' ? d.colours_location : 
+                                     colorBy === 'day' ? d.colours_day : '#808080')
+                    .on("mouseover", showTooltip)
+                    .on("mouseout", hideTooltip);
+            }
+
+            // Tooltip functions
+            function showTooltip(event, d) {
+                tooltip.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                tooltip.html(
+                    `Date: ${d.date}<br/>` +
+                    `Steps: ${d.steps.toLocaleString()}<br/>` +
+                    `Location: ${d.location}<br/>` +
+                    `Day Type: ${d.day_type}`
+                )
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            }
+
+            function hideTooltip() {
+                tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            }
+
+            // Button event handlers
+            d3.selectAll(".main-button").on("click", function() {
+                const buttonText = d3.select(this).text();
+                const isActive = d3.select(this).classed("active");
+                
+                // Reset all buttons and legends
+                d3.selectAll(".main-button").classed("active", false);
+                d3.selectAll(".legend").classed("show", false);
+                
+                // Toggle clicked button and its legend
+                d3.select(this).classed("active", !isActive);
+                if (buttonText === "By Location") {
+                    d3.select("#location-legend").classed("show", !isActive);
+                    updateVis(data, !isActive ? 'location' : null);
+                } else {
+                    d3.select("#day-legend").classed("show", !isActive);
+                    updateVis(data, !isActive ? 'day' : null);
+                }
+            });
+
+            // Create legends
+            const locations = [...new Set(data.map(d => d.location))];
+            locations.forEach(location => {
+                const locationData = data.find(d => d.location === location);
+                const item = d3.select("#location-legend")
+                    .append("div")
+                    .attr("class", "legend-item");
+
+                item.append("div")
+                    .attr("class", "legend-color")
+                    .style("background-color", locationData.colours_location);
+
+                item.append("span")
+                    .text(location);
+            });
+
+            const dayTypes = [...new Set(data.map(d => d.day_type))];
+            dayTypes.forEach(dayType => {
+                const dayTypeData = data.find(d => d.day_type === dayType);
+                const item = d3.select("#day-legend")
+                    .append("div")
+                    .attr("class", "legend-item");
+
+                item.append("div")
+                    .attr("class", "legend-color")
+                    .style("background-color", dayTypeData.colours_day);
+
+                item.append("span")
+                    .text(dayType);
+            });
+
+            // Initial visualization
+            updateVis(data);
+
+            // Add median line and labels once
+            svg.append("line")
+                .attr("class", "median-line")
+                .attr("x1", xScale(median))
+                .attr("x2", xScale(median))
+                .attr("y1", margin.top)
+                .attr("y2", height - margin.bottom);
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", margin.left)
+                .attr("y", height - 20)
+                .attr("text-anchor", "start")
+                .text("← Fewer steps per day");
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width - margin.right)
+                .attr("y", height - 20)
+                .attr("text-anchor", "end")
+                .text("More steps per day →");
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", xScale(median))
+                .attr("y", margin.top - 10)
+                .attr("text-anchor", "middle")
+                .text(`Median: ${median.toLocaleString()}`);
+        });
+    </script>
+</body>
+</html>
