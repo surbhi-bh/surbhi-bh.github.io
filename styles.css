@@ -1,170 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* ... (keep all previous styles before bio-section) ... */
-
-
-.bio-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.bio-title {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-.bio-content {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 2rem;
-    align-items: start;
-}
-
-.bio-image {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.bio-text {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-.bio-text p {
-    margin: 0 0 1.5rem 0;
-}
-
-.bio-text a {
-    color: #333;
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .bio-content {
-        grid-template-columns: 1fr;
-    }
-
-    .bio-title {
-        font-size: 3rem;
-    }
-
-    .bio-text {
-        font-size: 1.25rem;
-    }
-}
-
-/* .bio-section {
-    text-align: center;
-    margin: 120px auto; 
-    padding: 40px 20px;  
-    width: 100%;        
-    max-width: 1200px;  
-    min-height: 40vh;   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px; 
-} */
-
-.bio-section p:first-line {
-    font-weight: bold; /* Makes "Hello, I am Surbhi" bolder */
-    font-size: 32px; /* Makes the first line even bigger */
-}
-
-.bio-section p {
-    font-size: 2.5rem;      /* Much larger font size */
-    line-height: 1.4;      /* Adjusted line height */
-    color: #333;
-    margin: 0;
-    font-weight: 300;     /* Lighter weight for base text */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .bio-section {
-        margin: 80px auto;
-    }
-
-    .bio-section p {
-        font-size: 2rem;
-    }
-
-    #animated-word {
-        font-size: 2.2rem;
-        min-width: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .bio-section {
-        margin: 60px auto;
-    }
-
-    .bio-section p {
-        font-size: 1.8rem;
-    }
-
-    #animated-word {
-        font-size: 2rem;
-        min-width: 120px;
-    }
-}
-
-.section-container {
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 20px;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #333;
-}
-
-.section-content {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-.section-content p {
-    margin-bottom: 1.5rem;
-}
-
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .section-content {
-        font-size: 1.1rem;
-    }
-}
-
-/* ... (keep all styles after bio-section the same) ... */
-
+/* Base styles */
 body {
-    margin: 0;
     padding: 0;
     min-height: 100vh;
     background-color: #F3F1ED;
     font-family: 'Poppins', sans-serif;
+    margin: 0; /* Remove margin from body */
+
 }
 
+/* Header and Navigation */
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    max-width: 1200px;
+    padding: 15px 0;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
@@ -172,6 +23,10 @@ body {
 
 #logo img {
     height: 40px;
+}
+
+.main-content {
+    margin: 0 12%; /* Apply the 20% margins here */
 }
 
 .main-nav {
@@ -184,7 +39,7 @@ body {
 
 .main-nav a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 0.9rem;
     font-weight: 400;
     color: #333;
     transition: color 0.3s ease;
@@ -192,6 +47,50 @@ body {
 
 .main-nav a:hover {
     color: #EAAAAC;
+}
+
+.main-nav a.active {
+    color: #EAAAAC;
+    text-decoration: underline;
+}
+
+/* Biography section */
+.page-container {
+    margin: 0 auto;
+}
+
+.bio-container {
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.bio-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.bio-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.bio-image {
+    width: 400px; /* Use fixed width instead of percentage */
+    height: 400px; /* Same value as width to maintain aspect ratio */
+    object-fit: cover; /* This ensures the image fills the circle nicely */
+    border-radius: 50%; /* Keep the circular shape */
+}
+
+.bio-text p {
+    margin: 0 0 1.5rem 0;
+}
+
+.bio-text a {
+    color: #333;
+    text-decoration: underline;
 }
 
 .bio-section {
@@ -212,14 +111,47 @@ body {
     font-weight: 600;
 }
 
-.separator {
-    border: 0;
-    height: 3px;
-    background-color: #EAAAAC;
-    margin: 40px auto;
-    width: 90%;
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0.5) translateY(0); }
+    30% { opacity: 1; transform: scale(1) translateY(-10px); }
+    100% { opacity: 0; transform: scale(1.5) translateY(-30px); }
 }
 
+.sparkle {
+    position: absolute;
+    width: 6px; /* Slightly bigger sparkles */
+    height: 6px;
+    background: gold;
+    border-radius: 50%;
+    box-shadow: 0 0 8px gold, 0 0 15px yellow;
+    animation: sparkle 2s ease-out forwards; /* Longer duration */
+}
+
+
+/* Section styles */
+.section-container {
+    margin: 1.5rem auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #333;
+}
+
+.section-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.section-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Portfolio filter buttons */
 #filter-container {
     display: flex;
     justify-content: center;
@@ -250,25 +182,49 @@ body {
     color: white;
 }
 
+
+
 #articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 40px;
-    max-width: 1400px;
+    grid-template-columns: repeat(3, 340px); 
+    gap: 30px; 
+    justify-content: center;
+    padding: 40px 0;
     margin: 0 auto;
 }
 
+/* 
 .article-card {
     background: white;
-    /* border-radius: 0px; */
+    text-align: center;
+    border: 10px solid white;
     overflow: hidden;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
     color: inherit;
     display: block;
-}
+    border: 1px solid black;  
+    border-left-width: 1px;
+    border-right-width: 1px;
+} */
+
+
+.article-card {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    border: 1px solid black; 
+    border-left-width: 0.8px;
+    border-right-width: 0.8px;
+} 
 
 .article-card:hover {
     transform: translateY(-5px);
@@ -277,96 +233,12 @@ body {
 
 .article-image {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.article-content {
-    padding: 20px;
-}
-
-.article-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 0 10px 0;
-    color: #333;
-}
-
-.article-publisher {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
-}
-
-.article-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
-}
-
-.tag {
-    background: #f0f0f0;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 12px;
-    color: #666;
-}
-
-@media (max-width: 900px) {
-    #header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #topNav {
-        margin-top: 20px;
-    }
-
-    .main-nav {
-        justify-content: center;
-    }
-
-    #articles-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        padding: 20px;
-    }
-}
-
-
-/* Styles for the Polaroid-like Cards */
-#articles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.article-card {
-    background: white;
-    /* padding: 10px; */
-    text-align: center;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 10px solid white;
-    overflow: hidden;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-
-.article-image {
-    width: 100%;
     height: auto;
     object-fit: cover;
+    object-position: center; /* Center the focal point */
 }
+
+
 
 .article-content {
     padding: 15px;
@@ -401,90 +273,7 @@ body {
     color: #666;
 }
 
-.finalist-tag {
-    background: #666;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Polaroid Grid */
-#articles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Polaroid Card */
-.article-card {
-    background: white;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;  /* Thin black outline */
-    border-left-width: 1px;
-    border-right-width: 1px;
-}
-
-/* Image inside Polaroid */
-.article-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    margin-top: -2px; /* Reducing space between image & Polaroid edges */
-    margin-left: -2px;
-    margin-right: -2px;
-}
-
-/* Polaroid Content */
-.article-content {
-    padding: 15px;
-    text-align: center;
-    background: white;
-    width: 100%;
-}
-
-.article-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 0px;
-}
-
-.article-publisher {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
-}
-
-@keyframes sparkle {
-    0% { opacity: 0; transform: scale(0.5) translateY(0); }
-    30% { opacity: 1; transform: scale(1) translateY(-10px); }
-    100% { opacity: 0; transform: scale(1.5) translateY(-30px); }
-}
-
-.sparkle {
-    position: absolute;
-    width: 6px; /* Slightly bigger sparkles */
-    height: 6px;
-    background: gold;
-    border-radius: 50%;
-    box-shadow: 0 0 8px gold, 0 0 15px yellow;
-    animation: sparkle 2s ease-out forwards; /* Longer duration */
-}
-
-
+/* Contact page styles */
 #contact-section {
     max-width: 600px;
     margin: 4rem auto;
@@ -525,55 +314,195 @@ body {
     box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
+/* Training page styles */
 .center-image {
-    text-align: center;
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
 }
 
 .center-image img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-.center-image {
-    text-align: center;
-    margin-top: 2rem;
+#trainings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 2rem 0;
 }
 
-.center-image img {
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.training-box {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.training-section {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.training-box:hover {
+    background-color: #EAAAAC;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: #EAAAAC;
 }
 
-.training-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.training-info {
+    flex: 1;
 }
 
-.training-section li {
-    margin-bottom: 1rem;
+.training-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: black;
 }
 
-.training-section strong {
+.training-box p {
+    margin-bottom: 5px;
+    text-align: left;
+    color: #666;
+}
+
+.training-meta {
+    min-width: 120px;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.training-date {
     font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
 }
 
-/* Responsive adjustments */
+.training-location {
+    font-style: italic;
+    color: #888;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #888;
+}
+
+/* Responsive styles */
+@media only screen and (min-width: 1200px) {
+    .page-container {
+        width: 70%;
+    }
+    #header {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .page-container {
+        width: 85%;
+    }
+    #header {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #header {
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+    }
+    #topNav {
+        margin-top: 20px;
+    }
+    .main-nav {
+        justify-content: center;
+    }
+    .page-container {
+        width: 80%;
+    }
+    .bio-image {
+        width: 50%;
+    }
+    .bio-content {
+        flex-direction: column;
+    }
+    #articles-grid {
+        grid-template-columns: repeat(2, 280px);
+    }
+}
+
 @media (max-width: 768px) {
     .center-image img {
         max-width: 100%;
     }
+    .bio-title {
+        font-size: 3rem;
+    }
+    .bio-text {
+        font-size: 1.25rem;
+    }
+    .bio-image {
+        width: 80%;
+    }
+    .page-container {
+        width: 90%;
+    }
+    #header {
+        width: 90%;
+    }
+    #articles-grid {
+        grid-template-columns: repeat(1, 280px);
+    }
+    .training-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .training-meta {
+        text-align: center;
+        padding-left: 0;
+        padding-top: 10px;
+    }
+    .training-box p {
+        text-align: center;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-content {
+        font-size: 1.1rem;
+    }
 }
 
+@media (max-width: 480px) {
+    .bio-section {
+        margin: 60px auto;
+    }
+    #animated-word {
+        font-size: 2rem;
+        min-width: 120px;
+    }
+}
+
+/* For responsive screens */
+@media (max-width: 768px) {
+    .bio-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bio-image {
+        width: 120px;
+        height: 120px;
+    }
+}

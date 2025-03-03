@@ -176,20 +176,14 @@ function filterSelection(filter) {
 
 // 🎉 Confetti Effect 🎉
 function launchConfetti() {
-    const duration = 3 * 1000;  // 3 seconds
+    const duration = 1000;  // 3 seconds
     const end = Date.now() + duration;
 
     (function frame() {
         confetti({
-            particleCount: 5,
-            angle: 60,
-            spread: 55,
-            origin: { x: 0 },
-        });
-        confetti({
-            particleCount: 5,
-            angle: 120,
-            spread: 55,
+            particleCount: 8,
+            angle: 70,
+            spread: 175,
             origin: { x: 1 },
         });
 
