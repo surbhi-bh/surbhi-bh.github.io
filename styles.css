@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     background-color: #F3F1ED;
     font-family: 'Poppins', sans-serif;
-    margin: 0; /* Remove margin from body */
+    margin: 0; 
 
 }
 
@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 25px 0;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
@@ -31,7 +31,7 @@ body {
 
 .main-nav {
     display: flex;
-    gap: 30px;
+    gap: 35px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -45,14 +45,11 @@ body {
     transition: color 0.3s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a.active {
     color: #EAAAAC;
 }
 
-.main-nav a.active {
-    color: #EAAAAC;
-    text-decoration: underline;
-}
 
 /* Biography section */
 .page-container {
@@ -78,10 +75,10 @@ body {
 }
 
 .bio-image {
-    width: 400px; /* Use fixed width instead of percentage */
-    height: 400px; /* Same value as width to maintain aspect ratio */
-    object-fit: cover; /* This ensures the image fills the circle nicely */
-    border-radius: 50%; /* Keep the circular shape */
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 50%; 
 }
 
 .bio-text p {
@@ -110,6 +107,21 @@ body {
     color: #EAAAAC;
     font-weight: 600;
 }
+
+.hover-link {
+    color: #EAAAAC !important;  
+    font-weight: 600; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hover-link:hover {
+    color: #D94F5C !important;
+    text-decoration: underline;
+}
+
+
+
 
 @keyframes sparkle {
     0% { opacity: 0; transform: scale(0.5) translateY(0); }
@@ -208,7 +220,6 @@ body {
     border-left-width: 1px;
     border-right-width: 1px;
 } */
-
 
 .article-card {
     background: white;
