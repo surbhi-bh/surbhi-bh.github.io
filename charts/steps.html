@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Force-Directed Beeswarm Chart</title>
+    <title>Footnotes | Surbhi Bhatia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        
         body {
             margin: 0;
             padding: 0;
+            font-family: 'Poppins', sans-serif;
         }
         .container {
             width: 100%;
@@ -14,6 +18,8 @@
             flex-direction: column;
             align-items: center;
             position: relative;
+            padding: 0 10px;
+            box-sizing: border-box;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -30,7 +36,7 @@
             overflow: visible;
         }
         .dot {
-            fill: #808080;
+            fill: #B0B0B0;
             fill-opacity: 0.7;
             stroke: #fff;
             stroke-width: 0.5;
@@ -44,7 +50,7 @@
             filter: drop-shadow(0 0 3px rgba(0,0,0,0.3));
         }
         .star {
-            fill: #808080;
+            fill: #B0B0B0;
             fill-opacity: 0.7;
             stroke: #fff;
             stroke-width: 0.5;
@@ -65,7 +71,7 @@
         .controls {
             position: absolute;
             top: 10px;
-            right: 200px;
+            right: 20px;
             z-index: 100;
         }
         .button-group {
@@ -83,6 +89,8 @@
             font-size: 14px;
             min-width: 120px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
         }
         .main-button:hover {
             background: #EAAAAC;
@@ -97,34 +105,58 @@
         }
         .tooltip {
             position: absolute;
-            background: white;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 15px;
+            border-radius: 6px;
             pointer-events: none;
             opacity: 0;
-            font-size: 12px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            line-height: 1.4;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             z-index: 1000;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.2s ease;
+            border-left: 3px solid #EAAAAC;
+            max-width: 250px;
+        }
+        .tooltip-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .tooltip-value {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3px;
+        }
+        .tooltip-label {
+            color: #666;
+            margin-right: 15px;
+        }
+        .tooltip-data {
+            font-weight: 500;
+            color: #333;
         }
         .legend-container {
             width: 100%;
             display: flex;
             justify-content: center;
             position: absolute;
-            bottom: -40px;
+            bottom: -60px;
             left: 0;
             right: 0;
         }
         .legend {
             display: none;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             padding: 10px;
             border-radius: 8px;
             transition: opacity 0.5s ease;
             opacity: 0;
+            max-width: 80%;
+            margin: 0 auto;
         }
         .legend.show {
             display: flex;
@@ -135,6 +167,8 @@
             align-items: center;
             gap: 8px;
             padding: 5px 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
         }
         .legend-color {
             width: 12px;
@@ -144,19 +178,82 @@
         .axis-label {
             font-size: 14px;
             fill: #666;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Mobile responsive styles */
+        @media screen and (max-width: 768px) {
+            #chart {
+                height: 450px;
+            }
+            
+            .controls {
+                position: relative;
+                top: auto;
+                right: auto;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .button-group {
+                justify-content: center;
+            }
+            
+            .main-button {
+                padding: 6px 15px;
+                min-width: 100px;
+                font-size: 13px;
+            }
+            
+            .legend {
+                max-width: 95%;
+            }
+            
+            .legend-container {
+                bottom: -80px;
+            }
+            
+            .axis-label {
+                font-size: 12px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            #chart {
+                height: 350px;
+            }
+            
+            .dot, .star {
+                r: 6;
+            }
+            
+            .legend-item {
+                font-size: 11px;
+                padding: 3px 6px;
+            }
+            
+            .tooltip {
+                max-width: 200px;
+                font-size: 11px;
+                padding: 8px 12px;
+            }
+            
+            .legend-container {
+                bottom: -100px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div id="chart"></div>
-        
         <div class="controls">
             <div class="button-group">
                 <button class="main-button">By Location</button>
                 <button class="main-button">By Day</button>
             </div>
         </div>
+        
+        <div id="chart"></div>
         
         <div class="legend-container">
             <div class="legend" id="location-legend"></div>
@@ -182,14 +279,48 @@
             return path;
         }
 
+        // Get dimensions based on screen size
+        function getDimensions() {
+            const width = window.innerWidth <= 768 ? Math.min(window.innerWidth - 40, 700) : 1060;
+            const height = window.innerWidth <= 480 ? 300 : 
+                          window.innerWidth <= 768 ? 400 : 500;
+            const margin = { 
+                top: 20, 
+                right: window.innerWidth <= 480 ? 20 : 40, 
+                bottom: 60, 
+                left: window.innerWidth <= 480 ? 20 : 40 
+            };
+            
+            return { width, height, margin };
+        }
+
         // Load and process the data
         d3.json('steps.json').then(function(jsonData) {
             const data = jsonData.steps;
+            
+            // Custom color mappings
+            const locationColors = {
+                "New York": "#4e79a7",
+                "Pune": "#f28e2c",
+                "Delhi": "#e15759",
+                "Bombay": "#A020F0",
+                "Bangalore": "#06402B",
+                "Dharamshala": "#76b7b2",
+                "Chicago": "#ffcc00",
+                "Bangkok": "#af7aa1",
+                "Washington DC": "#008080",
+                "Philadelphia": "#A14D3A"
+            };
 
-            // Dimensions
-            const width = 1060;
-            const height = 500;
-            const margin = { top: 20, right: 40, bottom: 60, left: 40 };
+            const dayTypeColors = {
+                "Weekend": "#fc8d62",
+                "Weekday": "#66c2a5",
+                "Holiday": "#8da0cb",
+                "On my birthday!": "#C11C84" 
+            };
+
+            // Get initial dimensions
+            let { width, height, margin } = getDimensions();
 
             // Create SVG
             const svg = d3.select("#chart")
@@ -205,60 +336,110 @@
                 .attr("class", "tooltip");
 
             // Create scale for x-axis
-            const xScale = d3.scaleLinear()
+            let xScale = d3.scaleLinear()
                 .domain([0, d3.max(data, d => d.steps)])
                 .range([margin.left, width - margin.right]);
 
             // Calculate median
             const median = d3.median(data, d => d.steps);
-
-            function updateVis(filteredData, colorBy = null) {
-                const simulation = d3.forceSimulation(filteredData)
+            
+            // Function to run simulation
+            function runSimulation() {
+                // Run simulation once at startup to establish positions
+                const simulation = d3.forceSimulation(data)
                     .force("x", d3.forceX(d => xScale(d.steps)).strength(1))
                     .force("y", d3.forceY(height / 2))
-                    .force("collide", d3.forceCollide(8))
+                    .force("collide", d3.forceCollide(window.innerWidth <= 480 ? 6 : 8))
                     .stop();
-
+                
+                // Run simulation to completion
                 for (let i = 0; i < 300; i++) simulation.tick();
+            }
+            
+            // Run initial simulation
+            runSimulation();
+            
+            // Draw or update visualization
+            function updateVis(filteredData, colorBy = null) {
+                const dotSize = window.innerWidth <= 480 ? 6 : 8;
+                const starSize = window.innerWidth <= 480 ? 9 : 12;
+                
+                // First, remove all existing elements
+                svg.selectAll(".dot").remove();
+                svg.selectAll(".star").remove();
+                svg.selectAll(".median-line").remove();
+                svg.selectAll(".axis-label").remove();
+                
+                if (colorBy === 'day') {
+                    // When "By Day" is clicked, use stars for birthday entries
+                    // Update regular dots
+                    svg.selectAll(".dot")
+                        .data(filteredData.filter(d => d.day_type !== "On my birthday!"))
+                        .enter()
+                        .append("circle")
+                        .attr("class", "dot")
+                        .attr("r", dotSize)
+                        .attr("cx", d => d.x)
+                        .attr("cy", d => d.y)
+                        .style("fill", d => dayTypeColors[d.day_type] || "#B0B0B0")
+                        .on("mouseover", showTooltip)
+                        .on("mouseout", hideTooltip);
+                    
+                    // Add stars for birthday entries
+                    svg.selectAll(".star")
+                        .data(filteredData.filter(d => d.day_type === "On my birthday!"))
+                        .enter()
+                        .append("path")
+                        .attr("class", "star")
+                        .attr("d", starPath(starSize))
+                        .attr("transform", d => `translate(${d.x},${d.y})`)
+                        .style("fill", d => dayTypeColors[d.day_type] || "#B0B0B0")
+                        .on("mouseover", showTooltip)
+                        .on("mouseout", hideTooltip);
+                } else {
+                    // For all other views, use circles for everything
+                    svg.selectAll(".dot")
+                        .data(filteredData)
+                        .enter()
+                        .append("circle")
+                        .attr("class", "dot")
+                        .attr("r", dotSize)
+                        .attr("cx", d => d.x)
+                        .attr("cy", d => d.y)
+                        .style("fill", d => colorBy === 'location' ? 
+                            (locationColors[d.location] || "#B0B0B0") : "#B0B0B0")
+                        .on("mouseover", showTooltip)
+                        .on("mouseout", hideTooltip);
+                }
+                
+                // Add median line and labels
+                svg.append("line")
+                    .attr("class", "median-line")
+                    .attr("x1", xScale(median))
+                    .attr("x2", xScale(median))
+                    .attr("y1", margin.top)
+                    .attr("y2", height - margin.bottom);
 
-                // Update dots with transition
-                const dots = svg.selectAll(".dot")
-                    .data(filteredData.filter(d => !d.date.includes("birthday")));
+                svg.append("text")
+                    .attr("class", "axis-label")
+                    .attr("x", margin.left)
+                    .attr("y", height - 20)
+                    .attr("text-anchor", "start")
+                    .text("← Fewer steps");
 
-                dots.transition()
-                    .duration(500)
-                    .style("fill", d => colorBy === 'location' ? d.colours_location : 
-                                     colorBy === 'day' ? d.colours_day : '#808080');
+                svg.append("text")
+                    .attr("class", "axis-label")
+                    .attr("x", width - margin.right)
+                    .attr("y", height - 20)
+                    .attr("text-anchor", "end")
+                    .text("More steps →");
 
-                dots.enter()
-                    .append("circle")
-                    .attr("class", "dot")
-                    .attr("r", 8)
-                    .attr("cx", d => d.x)
-                    .attr("cy", d => d.y)
-                    .style("fill", d => colorBy === 'location' ? d.colours_location : 
-                                     colorBy === 'day' ? d.colours_day : '#808080')
-                    .on("mouseover", showTooltip)
-                    .on("mouseout", hideTooltip);
-
-                // Update stars with transition
-                const stars = svg.selectAll(".star")
-                    .data(filteredData.filter(d => d.date.includes("birthday")));
-
-                stars.transition()
-                    .duration(500)
-                    .style("fill", d => colorBy === 'location' ? d.colours_location : 
-                                     colorBy === 'day' ? d.colours_day : '#808080');
-
-                stars.enter()
-                    .append("path")
-                    .attr("class", "star")
-                    .attr("d", starPath(12))
-                    .attr("transform", d => `translate(${d.x},${d.y})`)
-                    .style("fill", d => colorBy === 'location' ? d.colours_location : 
-                                     colorBy === 'day' ? d.colours_day : '#808080')
-                    .on("mouseover", showTooltip)
-                    .on("mouseout", hideTooltip);
+                svg.append("text")
+                    .attr("class", "axis-label")
+                    .attr("x", xScale(median))
+                    .attr("y", margin.top - 10)
+                    .attr("text-anchor", "middle")
+                    .text(`Median: ${median.toLocaleString()} steps`);
             }
 
             // Tooltip functions
@@ -266,14 +447,41 @@
                 tooltip.transition()
                     .duration(200)
                     .style("opacity", .9);
-                tooltip.html(
-                    `Date: ${d.date}<br/>` +
-                    `Steps: ${d.steps.toLocaleString()}<br/>` +
-                    `Location: ${d.location}<br/>` +
-                    `Day Type: ${d.day_type}`
-                )
-                    .style("left", (event.pageX + 10) + "px")
-                    .style("top", (event.pageY - 28) + "px");
+                
+                // Enhanced tooltip with better formatting
+                tooltip.html(`
+                    <div class="tooltip-title">${d.date}</div>
+                    <div class="tooltip-value">
+                        <span class="tooltip-label">Steps:</span>
+                        <span class="tooltip-data">${d.steps.toLocaleString()}</span>
+                    </div>
+                    <div class="tooltip-value">
+                        <span class="tooltip-label">Location:</span>
+                        <span class="tooltip-data">${d.location}</span>
+                    </div>
+                `);
+                
+                // Get SVG's position relative to the viewport
+                const svgRect = svg.node().getBoundingClientRect();
+                const dotX = d.x * svgRect.width / width; // Scale dot position to actual SVG size
+                const actualDotX = dotX + svgRect.left;
+                
+                // Calculate the distance from right edge
+                const windowWidth = window.innerWidth;
+                const fromRightEdge = windowWidth - actualDotX;
+                
+                // Position tooltip based on dot position on screen
+                if (fromRightEdge < 250) {
+                    // If too close to the right edge, position to the left
+                    tooltip.style("left", "auto")
+                           .style("right", (fromRightEdge + 30) + "px")
+                           .style("top", (event.pageY - 10) + "px");
+                } else {
+                    // Standard positioning
+                    tooltip.style("left", (actualDotX + 15) + "px")
+                           .style("right", "auto")
+                           .style("top", (event.pageY - 10) + "px");
+                }
             }
 
             function hideTooltip() {
@@ -302,17 +510,16 @@
                 }
             });
 
-            // Create legends
+            // Create legends with our custom colors
             const locations = [...new Set(data.map(d => d.location))];
             locations.forEach(location => {
-                const locationData = data.find(d => d.location === location);
                 const item = d3.select("#location-legend")
                     .append("div")
                     .attr("class", "legend-item");
 
                 item.append("div")
                     .attr("class", "legend-color")
-                    .style("background-color", locationData.colours_location);
+                    .style("background-color", locationColors[location] || "#B0B0B0");
 
                 item.append("span")
                     .text(location);
@@ -320,50 +527,61 @@
 
             const dayTypes = [...new Set(data.map(d => d.day_type))];
             dayTypes.forEach(dayType => {
-                const dayTypeData = data.find(d => d.day_type === dayType);
                 const item = d3.select("#day-legend")
                     .append("div")
                     .attr("class", "legend-item");
 
                 item.append("div")
                     .attr("class", "legend-color")
-                    .style("background-color", dayTypeData.colours_day);
+                    .style("background-color", dayTypeColors[dayType] || "#B0B0B0");
 
                 item.append("span")
                     .text(dayType);
             });
 
+            // Handle window resize
+            function handleResize() {
+                const oldWidth = width;
+                const oldHeight = height;
+                
+                // Get new dimensions
+                const dimensions = getDimensions();
+                width = dimensions.width;
+                height = dimensions.height;
+                margin = dimensions.margin;
+                
+                // Update scales
+                xScale = d3.scaleLinear()
+                    .domain([0, d3.max(data, d => d.steps)])
+                    .range([margin.left, width - margin.right]);
+                
+                // Update SVG viewBox
+                svg.attr("viewBox", `0 0 ${width} ${height}`);
+                
+                // If dimensions changed significantly, rerun simulation
+                if (Math.abs(oldWidth - width) > 100 || Math.abs(oldHeight - height) > 100) {
+                    runSimulation();
+                }
+                
+                // Redraw the visualization
+                const activeButton = d3.select(".main-button.active");
+                if (activeButton.size()) {
+                    const buttonText = activeButton.text();
+                    if (buttonText === "By Location") {
+                        updateVis(data, 'location');
+                    } else if (buttonText === "By Day") {
+                        updateVis(data, 'day');
+                    }
+                } else {
+                    updateVis(data);
+                }
+            }
+            
+            // Add window resize event listener
+            window.addEventListener('resize', handleResize);
+            
             // Initial visualization
             updateVis(data);
-
-            // Add median line and labels once
-            svg.append("line")
-                .attr("class", "median-line")
-                .attr("x1", xScale(median))
-                .attr("x2", xScale(median))
-                .attr("y1", margin.top)
-                .attr("y2", height - margin.bottom);
-
-            svg.append("text")
-                .attr("class", "axis-label")
-                .attr("x", margin.left)
-                .attr("y", height - 20)
-                .attr("text-anchor", "start")
-                .text("← Fewer steps per day");
-
-            svg.append("text")
-                .attr("class", "axis-label")
-                .attr("x", width - margin.right)
-                .attr("y", height - 20)
-                .attr("text-anchor", "end")
-                .text("More steps per day →");
-
-            svg.append("text")
-                .attr("class", "axis-label")
-                .attr("x", xScale(median))
-                .attr("y", margin.top - 10)
-                .attr("text-anchor", "middle")
-                .text(`Median: ${median.toLocaleString()}`);
         });
     </script>
 </body>
