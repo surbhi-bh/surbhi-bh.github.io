@@ -169,7 +169,7 @@ function filterSelection(filter) {
     });
 
     // 🎉 Trigger confetti when "Award Winning" is clicked
-    if (filter === 'Award Winning') {
+    if (filter === 'award-winning') {
         launchConfetti();
     }
 }
