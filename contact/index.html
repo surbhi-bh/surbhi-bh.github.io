@@ -6,6 +6,38 @@
     <title>Surbhi Bhatia</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .center-text {
+            text-align: center;
+            margin: 6rem auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .main-content {
+            flex: 1;
+        }
+        #footer-container {
+            margin-top: auto;
+        }
+        .center-text a {
+            text-decoration: none;
+            color: #EAAAAC;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .center-text a:hover {
+            color: #e06666;
+        }
+    </style>
 </head>
 <body>
     <header id="header">
@@ -25,25 +57,15 @@
 
     <div class="main-content">
     <main>
-        <section id="contact-section">
-            <h1>Get in Touch</h1>
-            <p>I really enjoy connecting with fellow data visualization enthusiasts and professionals. Feel free to reach out for collaborations, discussions, or just to say hello!</p>
-            <p>Email: <a href="mailto:surbhibhatia1906@gmail.com">surbhibhatia1906@gmail.com</a></p>
-
-            <!-- Social Media Links -->
-            <div class="social-links">
-                <a href="https://twitter.com/surbhaai" aria-label="Twitter" target="_blank" class="fa-brands fa-twitter"></a>
-                <a href="https://www.linkedin.com/in/surbhi-bhatia-17763b88/" aria-label="LinkedIn" target="_blank" class="fa-brands fa-linkedin"></a>
-                <a href="https://bsky.app/profile/surbhaai.bsky.social" aria-label="Bluesky" target="_blank" class="fa-brands fa-bluesky"></a>
-            </div>
-
-            <!-- Calendly Embed -->
-            <p>Would you like to schedule a call? You can book a time slot using my <a href="https://calendly.com/your-calendly-link" target="_blank">Calendly</a> link.</p>
-
-            <!-- Optional: Embed Calendly widget directly -->
-            <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-link" style="min-width:320px;height:630px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script> -->
-        </section>
+        <div class="center-text">
+            <p>I am available on <a href="https://twitter.com/surbhaai" target="_blank">Twitter</a>, <a href="https://www.linkedin.com/in/surbhi-bhatia-17763b88/" target="_blank">LinkedIn</a> and <a href="https://bsky.app/profile/surbhaai.bsky.social" target="_blank">Bluesky</a>. </p><br>
+            <p>Email me on <a href="mailto:surbhibhatia1906@gmail.com">surbhibhatia1906@gmail.com</a> <br>if you want to connect, to work, talk, or go for a walk.</p><br>
+            <p>Happy <script>
+                const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                const today = new Date();
+                document.write(days[today.getDay()]);
+            </script>!</p>
+        </div>
     </main>
     </div>
     <!-- Footer -->
