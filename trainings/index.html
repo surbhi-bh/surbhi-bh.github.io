@@ -152,9 +152,10 @@
 /* Title with tag container */
 .title-with-tag {
     display: flex;
-    align-items: center;
+    place-content: space-between;
+    /* align-items: center; */
     flex-grow: 1;
-    padding-right: 10px;
+    /* padding-right: 10px; */
 }
 
 .title-with-tag h3 {
@@ -176,6 +177,15 @@
     font-family: 'Poppins', sans-serif;
     white-space: nowrap;
     height: 18px;
+    margin: 2px 0;
+}
+
+.training-meta-section {
+    display: flex;
+    flex-direction: row-reverse;
+    place-content: space-between;
+    align-items: center;
+    margin: 12px 0 0;
 }
 
 .training-box[data-type="panel"] .training-type {
@@ -220,6 +230,7 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     line-height: 1.2;
+    text-align: left;
 }
 
 .training-location {
@@ -285,7 +296,7 @@
     }
     
     .title-with-tag {
-        margin-bottom: 5px;
+        /* margin-bottom: 5px; */
         width: 100%;
     }
     
@@ -323,7 +334,7 @@
             <ul class="main-nav">
                 <li><a href="/">Surbhi</a></li>
                 <li><a href="/portfolio">Works</a></li>
-                <li><a href="/trainings">Talks</a></li>
+                <li><a href="/trainings" class="active">Talks</a></li>
                 <li><a href="/contact">Connects</a></li>
             </ul>
         </nav>
@@ -429,6 +440,15 @@
         type: "talk"
     },
     {
+       title: "Time to resolve insolvencies in India",
+       organisation: "Young Scholars Initiative, Asia Convening, Hanoi",
+       description: "talk",
+       date: "August 2019",
+       location: "Hanoi, Vietnam",
+       link: "https://old.ueb.edu.vn/Uploads/Article/thanhtu_bkd/2019_8/File/YSI%20Asia%20Convening%20Vietnam%202019%20Program%20compact.pdf",
+       type: "talk"
+   },
+    {
         title: "Introductory and Intermediate R programming",
         organisation: "St. Xavier's College (Autonomous), Mumbai",
         description: "training",
@@ -488,11 +508,15 @@ function displayTrainings(trainings) {
                             <h3>${training.title}</h3>
                             <span class="training-type">${training.description}</span>
                         </div>
-                        <div class="training-date">${training.date}</div>
+                        
                     </div>
                     <div class="training-bottom-row">
                         <div class="training-organisation">${training.organisation}</div>
+                        
+                    </div>
+                    <div class="training-meta-section">
                         <div class="training-location"><i class="fas fa-map-marker-alt"></i> ${training.location}</div>
+                        <div class="training-date">${training.date}</div>    
                     </div>
                 </div>
             </div>
