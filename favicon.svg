@@ -10,7 +10,7 @@
   <!-- White background -->
   <rect width="32" height="32" rx="6" fill="#ffffff"/>
   <!-- Red top-right -->
-  <rect x="16" y="0" width="16" height="26" fill="#d94f3d" clip-path="url(#clip)"/>
+  <rect x="16" y="0" width="16" height="26" fill="#d0116f" clip-path="url(#clip)"/>
   <!-- Blue bottom-left -->
   <rect x="0" y="26" width="16" height="6" fill="#4a7fa5" clip-path="url(#clip)"/>
   <!-- Yellow bottom-right -->
